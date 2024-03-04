@@ -103,13 +103,13 @@ namespace WinFormsApp1
                 switch (ttt.result)
                 {
                     case WinnerOption.Tie:
-                        resultString = " remis";
+                        resultString = " padl remis";
                         break;
                     case WinnerOption.XPlayer:
-                        resultString = " wygral gracz X";
+                        resultString = " wygral gracz niebieski";
                         break;
                     case WinnerOption.OPlayer:
-                        resultString = " wygral gracz O";
+                        resultString = " wygral gracz czerwony";
                         break;
                 }
 
