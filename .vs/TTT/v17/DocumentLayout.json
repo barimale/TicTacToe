@@ -1,0 +1,70 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "G:\\TicTacToe\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{846F66FD-DBA1-425B-B147-ADC927CBD30C}|TTT\\TicTacToeGame.csproj|g:\\tictactoe\\ttt\\tictactoe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{846F66FD-DBA1-425B-B147-ADC927CBD30C}|TTT\\TicTacToeGame.csproj|solutionrelative:ttt\\tictactoe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{846F66FD-DBA1-425B-B147-ADC927CBD30C}|TTT\\TicTacToeGame.csproj|g:\\tictactoe\\ttt\\tictactoe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{846F66FD-DBA1-425B-B147-ADC927CBD30C}|TTT\\TicTacToeGame.csproj|solutionrelative:ttt\\tictactoe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{846F66FD-DBA1-425B-B147-ADC927CBD30C}|TTT\\TicTacToeGame.csproj|g:\\tictactoe\\ttt\\tictactoegame.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{846F66FD-DBA1-425B-B147-ADC927CBD30C}|TTT\\TicTacToeGame.csproj|solutionrelative:ttt\\tictactoegame.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TicTacToe.cs",
+              "DocumentMoniker": "G:\\TicTacToe\\TTT\\TicTacToe.cs",
+              "RelativeDocumentMoniker": "TTT\\TicTacToe.cs",
+              "ToolTip": "G:\\TicTacToe\\TTT\\TicTacToe.cs",
+              "RelativeToolTip": "TTT\\TicTacToe.cs",
+              "ViewState": "AQIAAFMAAAAAAAAAAAAIwHAAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-04T15:06:14.719Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TicTacToe.cs [Design]",
+              "DocumentMoniker": "G:\\TicTacToe\\TTT\\TicTacToe.cs",
+              "RelativeDocumentMoniker": "TTT\\TicTacToe.cs",
+              "ToolTip": "G:\\TicTacToe\\TTT\\TicTacToe.cs [Design]",
+              "RelativeToolTip": "TTT\\TicTacToe.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-04T15:06:08.103Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TicTacToeGame",
+              "DocumentMoniker": "G:\\TicTacToe\\TTT\\TicTacToeGame.csproj",
+              "RelativeDocumentMoniker": "TTT\\TicTacToeGame.csproj",
+              "ToolTip": "G:\\TicTacToe\\TTT\\TicTacToeGame.csproj",
+              "RelativeToolTip": "TTT\\TicTacToeGame.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-03-04T15:06:05.669Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
