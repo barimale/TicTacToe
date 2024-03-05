@@ -1,17 +1,18 @@
 using TicTacToeGame.Services;
+using TicTacToeGame.Utilities;
 
 namespace WinFormsApp1
 {
     public partial class Form1 : Form
     {
-        private TicTacTocService ttt;
+        private TicTacToeManager manager;
 
         public Form1()
         {
             InitializeComponent();
-            ttt = new TicTacTocService();
+            manager = new TicTacToeManager();
 
-            HideLabels(
+            UIHelper.HideLabels(
                 button1,
                 button2,
                 button3,
@@ -22,7 +23,7 @@ namespace WinFormsApp1
                 button8,
                 button9);
 
-            ClearButtons(
+            UIHelper.ClearButtons(
                 button1,
                 button2,
                 button3,
@@ -34,26 +35,11 @@ namespace WinFormsApp1
                 button9);
         }
 
-        private void HideLabels(params Button[] btns)
-        {
-            foreach (var btn in btns)
-            {
-                btn.Text = string.Empty;
-            }
-        }
 
-        private void ClearButtons(params Button[] buttons)
-        {
-            foreach (var button in buttons)
-            {
-                button.BackColor = Color.White;
-                button.Enabled = true;
-            }
-        }
 
-        private void rESTARTToolStripMenuItem_Click(object sender, EventArgs e)
+        private void RefreshGame(object sender, EventArgs e)
         {
-            ClearButtons(
+            UIHelper.ClearButtons(
                 button1,
                 button2,
                 button3,
@@ -64,71 +50,14 @@ namespace WinFormsApp1
                 button8,
                 button9);
 
-            ttt.RestartInstance();
-        }
-
-        private void buttonClickExecute(Button button, int row, int column)
-        {
-            try
-            {
-                ttt.MakeOperation(row, column);
-
-                switch (ttt.BoardState[row][column])
-                {
-                    case BoardStateOptions.X:
-                        button.BackColor = Color.Blue;
-                        break;
-                    case BoardStateOptions.O:
-                        button.BackColor = Color.Red;
-                        break;
-                    case BoardStateOptions.Undefined:
-                        button.BackColor = Color.White;
-                        break;
-                }
-
-                button.Enabled = false;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-        }
-
-        private void IsFinished()
-        {
-            if (ttt.IsFinished())
-            {
-                var resultString = string.Empty;
-                // show message
-                switch (ttt.result)
-                {
-                    case WinnerOption.Tie:
-                        resultString = " padl remis";
-                        break;
-                    case WinnerOption.XPlayer:
-                        resultString = " wygral gracz niebieski";
-                        break;
-                    case WinnerOption.OPlayer:
-                        resultString = " wygral gracz czerwony";
-                        break;
-                }
-
-                string message = "Koniec:" + resultString + ".";
-                string caption = "Wynik";
-                MessageBoxButtons buttons = MessageBoxButtons.OK;
-
-                // Displays the MessageBox.
-                MessageBox.Show(message, caption, buttons);
-
-                rESTARTToolStripMenuItem_Click(null, null);
-            }
+            manager.RestartInstance();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             try
             {
-                buttonClickExecute(button1, 0, 0);
+                manager.buttonClickExecute(button1, 0, 0);
             }
             catch (Exception ex)
             {
@@ -136,7 +65,9 @@ namespace WinFormsApp1
             }
             finally
             {
-                IsFinished();
+                var result = manager.IsFinished();
+                if(result)
+                    RefreshGame(null, null);
             }
         }
 
@@ -144,7 +75,7 @@ namespace WinFormsApp1
         {
             try
             {
-                buttonClickExecute(button2, 0, 1);
+                manager.buttonClickExecute(button2, 0, 1);
             }
             catch (Exception ex)
             {
@@ -152,7 +83,9 @@ namespace WinFormsApp1
             }
             finally
             {
-                IsFinished();
+                var result = manager.IsFinished();
+                if (result)
+                    RefreshGame(null, null);
             }
         }
 
@@ -160,7 +93,7 @@ namespace WinFormsApp1
         {
             try
             {
-                buttonClickExecute(button3, 0, 2);
+                manager.buttonClickExecute(button3, 0, 2);
             }
             catch (Exception ex)
             {
@@ -168,7 +101,9 @@ namespace WinFormsApp1
             }
             finally
             {
-                IsFinished();
+                var result = manager.IsFinished();
+                if (result)
+                    RefreshGame(null, null);
             }
         }
 
@@ -176,7 +111,7 @@ namespace WinFormsApp1
         {
             try
             {
-                buttonClickExecute(button4, 1, 0);
+                manager.buttonClickExecute(button4, 1, 0);
             }
             catch (Exception ex)
             {
@@ -184,7 +119,9 @@ namespace WinFormsApp1
             }
             finally
             {
-                IsFinished();
+                var result = manager.IsFinished();
+                if (result)
+                    RefreshGame(null, null);
             }
         }
 
@@ -192,7 +129,7 @@ namespace WinFormsApp1
         {
             try
             {
-                buttonClickExecute(button5, 1, 1);
+                manager.buttonClickExecute(button5, 1, 1);
             }
             catch (Exception ex)
             {
@@ -200,7 +137,9 @@ namespace WinFormsApp1
             }
             finally
             {
-                IsFinished();
+                var result = manager.IsFinished();
+                if (result)
+                    RefreshGame(null, null);
             }
         }
 
@@ -208,7 +147,7 @@ namespace WinFormsApp1
         {
             try
             {
-                buttonClickExecute(button6, 1, 2);
+                manager.buttonClickExecute(button6, 1, 2);
             }
             catch (Exception ex)
             {
@@ -216,7 +155,9 @@ namespace WinFormsApp1
             }
             finally
             {
-                IsFinished();
+                var result = manager.IsFinished();
+                if (result)
+                    RefreshGame(null, null);
             }
         }
 
@@ -224,7 +165,7 @@ namespace WinFormsApp1
         {
             try
             {
-                buttonClickExecute(button7, 2, 0);
+                manager.buttonClickExecute(button7, 2, 0);
             }
             catch (Exception ex)
             {
@@ -232,7 +173,9 @@ namespace WinFormsApp1
             }
             finally
             {
-                IsFinished();
+                var result = manager.IsFinished();
+                if (result)
+                    RefreshGame(null, null);
             }
         }
 
@@ -240,7 +183,7 @@ namespace WinFormsApp1
         {
             try
             {
-                buttonClickExecute(button8, 2, 1);
+                manager.buttonClickExecute(button8, 2, 1);
             }
             catch (Exception ex)
             {
@@ -248,7 +191,9 @@ namespace WinFormsApp1
             }
             finally
             {
-                IsFinished();
+                var result = manager.IsFinished();
+                if (result)
+                    RefreshGame(null, null);
             }
         }
 
@@ -256,7 +201,7 @@ namespace WinFormsApp1
         {
             try
             {
-                buttonClickExecute(button9, 2, 2);
+                manager.buttonClickExecute(button9, 2, 2);
             }
             catch (Exception ex)
             {
@@ -264,7 +209,9 @@ namespace WinFormsApp1
             }
             finally
             {
-                IsFinished();
+                var result = manager.IsFinished();
+                if (result)
+                    RefreshGame(null, null);
             }
         }
 

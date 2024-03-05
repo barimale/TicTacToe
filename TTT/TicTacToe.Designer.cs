@@ -147,7 +147,7 @@
             rESTARTToolStripMenuItem.Name = "rESTARTToolStripMenuItem";
             rESTARTToolStripMenuItem.Size = new Size(81, 24);
             rESTARTToolStripMenuItem.Text = "RESTART";
-            rESTARTToolStripMenuItem.Click += rESTARTToolStripMenuItem_Click;
+            rESTARTToolStripMenuItem.Click += RefreshGame;
             // 
             // Form1
             // 
