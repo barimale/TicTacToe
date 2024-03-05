@@ -1,4 +1,6 @@
-﻿namespace TicTacToeGame.Services
+﻿using TicTacToeGame.Services.CorrectedLibs;
+
+namespace TicTacToeGame.Services
 {
     internal class TicTacTocService
     {

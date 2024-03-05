@@ -1,20 +1,5 @@
-﻿namespace TicTacToeGame.Services
+﻿namespace TicTacToeGame.Services.CorrectedLibs
 {
-    // copied from the source(TicTacToe nuget) and corrected as the columns method had a typo
-    public enum WinnerOption
-    {
-        XPlayer,
-        OPlayer,
-        Tie
-    }
-
-    public enum BoardStateOptions
-    {
-        Undefined,
-        X,
-        O
-    }
-
     internal class TicTacToeInstanceCorrected
     {
         private bool XTurn { get; set; } = true;
@@ -38,18 +23,18 @@
                 return true;
             }
 
-            return values.All((T v) => v.Equals(values[0]));
+            return values.All((v) => v.Equals(values[0]));
         }
 
         private bool CheckForWinner(out WinnerOption? WinnerObject)
         {
-            WinnerOption? winnerOption = (WinnerObject = new WinnerOption?[4]
+            WinnerOption? winnerOption = WinnerObject = new WinnerOption?[4]
             {
             CheckCross1(),
             CheckCross2(),
             CheckRows(),
             CheckColumns()
-            }.FirstOrDefault((WinnerOption? po) => po.HasValue));
+            }.FirstOrDefault((po) => po.HasValue);
             Finished = winnerOption.HasValue;
             return winnerOption.HasValue;
         }
@@ -67,7 +52,7 @@
 
             if (num >= 2 && BoardState[0][0] != 0)
             {
-                return (BoardState[0][0] != BoardStateOptions.X) ? WinnerOption.OPlayer : WinnerOption.XPlayer;
+                return BoardState[0][0] != BoardStateOptions.X ? WinnerOption.OPlayer : WinnerOption.XPlayer;
             }
 
             return null;
@@ -86,7 +71,7 @@
 
             if (num >= 2 && BoardState[0][2] != 0)
             {
-                return (BoardState[0][BoardState.Length - 1] != BoardStateOptions.X) ? WinnerOption.OPlayer : WinnerOption.XPlayer;
+                return BoardState[0][BoardState.Length - 1] != BoardStateOptions.X ? WinnerOption.OPlayer : WinnerOption.XPlayer;
             }
 
             return null;
@@ -94,19 +79,19 @@
 
         private WinnerOption? CheckRows()
         {
-            if (AllEqual<BoardStateOptions>(BoardState[0][0], BoardState[0][1], BoardState[0][2]) && BoardState[0][0] != 0)
+            if (AllEqual(BoardState[0][0], BoardState[0][1], BoardState[0][2]) && BoardState[0][0] != 0)
             {
-                return (BoardState[0][0] != BoardStateOptions.X) ? WinnerOption.OPlayer : WinnerOption.XPlayer;
+                return BoardState[0][0] != BoardStateOptions.X ? WinnerOption.OPlayer : WinnerOption.XPlayer;
             }
 
-            if (AllEqual<BoardStateOptions>(BoardState[1][0], BoardState[1][1], BoardState[1][2]) && BoardState[1][0] != 0)
+            if (AllEqual(BoardState[1][0], BoardState[1][1], BoardState[1][2]) && BoardState[1][0] != 0)
             {
-                return (BoardState[1][0] != BoardStateOptions.X) ? WinnerOption.OPlayer : WinnerOption.XPlayer;
+                return BoardState[1][0] != BoardStateOptions.X ? WinnerOption.OPlayer : WinnerOption.XPlayer;
             }
 
-            if (AllEqual<BoardStateOptions>(BoardState[2][0], BoardState[2][1], BoardState[2][2]) && BoardState[2][0] != 0)
+            if (AllEqual(BoardState[2][0], BoardState[2][1], BoardState[2][2]) && BoardState[2][0] != 0)
             {
-                return (BoardState[2][0] != BoardStateOptions.X) ? WinnerOption.OPlayer : WinnerOption.XPlayer;
+                return BoardState[2][0] != BoardStateOptions.X ? WinnerOption.OPlayer : WinnerOption.XPlayer;
             }
 
             return null;
@@ -114,19 +99,19 @@
 
         private WinnerOption? CheckColumns()
         {
-            if (AllEqual<BoardStateOptions>(BoardState[0][0], BoardState[1][0], BoardState[2][0]) && BoardState[0][0] != 0)
+            if (AllEqual(BoardState[0][0], BoardState[1][0], BoardState[2][0]) && BoardState[0][0] != 0)
             {
-                return (BoardState[0][0] != BoardStateOptions.X) ? WinnerOption.OPlayer : WinnerOption.XPlayer;
+                return BoardState[0][0] != BoardStateOptions.X ? WinnerOption.OPlayer : WinnerOption.XPlayer;
             }
 
-            if (AllEqual<BoardStateOptions>(BoardState[0][1], BoardState[1][1], BoardState[2][1]) && BoardState[0][1] != 0)
+            if (AllEqual(BoardState[0][1], BoardState[1][1], BoardState[2][1]) && BoardState[0][1] != 0)
             {
-                return (BoardState[0][1] != BoardStateOptions.X) ? WinnerOption.OPlayer : WinnerOption.XPlayer;
+                return BoardState[0][1] != BoardStateOptions.X ? WinnerOption.OPlayer : WinnerOption.XPlayer;
             }
 
-            if (AllEqual<BoardStateOptions>(BoardState[0][2], BoardState[1][2], BoardState[2][2]) && BoardState[0][2] != 0)
+            if (AllEqual(BoardState[0][2], BoardState[1][2], BoardState[2][2]) && BoardState[0][2] != 0)
             {
-                return (BoardState[0][2] != BoardStateOptions.X) ? WinnerOption.OPlayer : WinnerOption.XPlayer;
+                return BoardState[0][2] != BoardStateOptions.X ? WinnerOption.OPlayer : WinnerOption.XPlayer;
             }
 
             return null;
@@ -154,14 +139,14 @@
                 throw new Exception("This field is not empty.");
             }
 
-            BoardState[row][column] = (XTurn ? BoardStateOptions.X : BoardStateOptions.O);
+            BoardState[row][column] = XTurn ? BoardStateOptions.X : BoardStateOptions.O;
             XTurn = !XTurn;
             if (CheckForWinner(out var WinnerObject))
             {
                 return WinnerObject;
             }
 
-            if (BoardState.Where((BoardStateOptions[] bs1) => bs1.Where((BoardStateOptions bs2) => bs2 == BoardStateOptions.Undefined).Count() > 0).Count() == 0)
+            if (BoardState.Where((bs1) => bs1.Where((bs2) => bs2 == BoardStateOptions.Undefined).Count() > 0).Count() == 0)
             {
                 Finished = true;
                 return WinnerOption.Tie;
