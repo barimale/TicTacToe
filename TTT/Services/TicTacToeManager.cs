@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TicTacToeGame.Services.CorrectedLibs;
-using TicTacToeGame.Utilities;
+﻿using TicTacToeGame.Services.CorrectedLibs;
 
 namespace TicTacToeGame.Services
 {
@@ -43,9 +37,9 @@ namespace TicTacToeGame.Services
 
                 button.Enabled = false;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                Console.WriteLine(ex.Message);
+                throw;
             }
         }
 

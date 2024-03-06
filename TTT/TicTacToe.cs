@@ -1,3 +1,4 @@
+using SyslogLogging;
 using TicTacToeGame.Services;
 using TicTacToeGame.Utilities;
 
@@ -6,11 +7,15 @@ namespace WinFormsApp1
     public partial class Form1 : Form
     {
         private TicTacToeManager manager;
+        private LoggingModule log;
 
         public Form1()
         {
             InitializeComponent();
             manager = new TicTacToeManager();
+
+            log = new LoggingModule("tictactoegame-logs.txt");
+            log.Settings.FileLogging = FileLoggingMode.SingleLogFile;
 
             UIHelper.HideLabels(
                 button1,
@@ -33,12 +38,16 @@ namespace WinFormsApp1
                 button7,
                 button8,
                 button9);
+
+            log.Info("App initialized.");
         }
 
 
 
         private void RefreshGame(object sender, EventArgs e)
         {
+            log.Info("App is refreshing.");
+
             UIHelper.ClearButtons(
                 button1,
                 button2,
@@ -51,6 +60,8 @@ namespace WinFormsApp1
                 button9);
 
             manager.RestartInstance();
+
+            log.Info("App refreshed.");
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -61,7 +72,7 @@ namespace WinFormsApp1
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                log.Critical(ex.Message);
             }
             finally
             {
@@ -79,7 +90,7 @@ namespace WinFormsApp1
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                log.Critical(ex.Message);
             }
             finally
             {
@@ -97,7 +108,7 @@ namespace WinFormsApp1
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                log.Critical(ex.Message);
             }
             finally
             {
@@ -115,7 +126,7 @@ namespace WinFormsApp1
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                log.Critical(ex.Message);
             }
             finally
             {
@@ -133,7 +144,7 @@ namespace WinFormsApp1
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                log.Critical(ex.Message);
             }
             finally
             {
@@ -151,7 +162,7 @@ namespace WinFormsApp1
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                log.Critical(ex.Message);
             }
             finally
             {
@@ -169,7 +180,7 @@ namespace WinFormsApp1
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                log.Critical(ex.Message);
             }
             finally
             {
@@ -187,7 +198,7 @@ namespace WinFormsApp1
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                log.Critical(ex.Message);
             }
             finally
             {
@@ -205,7 +216,7 @@ namespace WinFormsApp1
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                log.Critical(ex.Message);
             }
             finally
             {
