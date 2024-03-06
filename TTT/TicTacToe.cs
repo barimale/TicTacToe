@@ -218,7 +218,9 @@ namespace WinFormsApp1
         private void Form1_Load(object sender, EventArgs e)
         {
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Text = "Tic Tac Toe";
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
         }
     }
 }
