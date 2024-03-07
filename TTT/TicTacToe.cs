@@ -232,6 +232,7 @@ namespace WinFormsApp1
             this.MinimizeBox = false;
             this.Text = "Tic Tac Toe";
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.CenterToScreen();
         }
     }
 }
