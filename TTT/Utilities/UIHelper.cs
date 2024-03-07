@@ -2,11 +2,12 @@
 {
     internal static class UIHelper
     {
-        public static void HideLabels(params Button[] btns)
+        public static void HideLabels(params Button[] buttons)
         {
-            foreach (var btn in btns)
+            foreach (var button in buttons)
             {
-                btn.Text = string.Empty;
+                button.Text = string.Empty;
+                button.TabStop = false;
             }
         }
 
