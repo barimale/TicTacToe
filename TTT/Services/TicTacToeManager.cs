@@ -47,22 +47,7 @@ namespace TicTacToeGame.Services
         {
             if (ttt.IsFinished())
             {
-                var resultString = string.Empty;
-                // show message
-                switch (ttt.result)
-                {
-                    case WinnerOption.Tie:
-                        resultString = " padl remis";
-                        break;
-                    case WinnerOption.XPlayer:
-                        resultString = " wygral gracz niebieski";
-                        break;
-                    case WinnerOption.OPlayer:
-                        resultString = " wygral gracz czerwony";
-                        break;
-                }
-
-                string message = "Koniec:" + resultString + ".";
+                string message = GenerateResultString();
                 string caption = "Wynik";
                 MessageBoxButtons buttons = MessageBoxButtons.OK;
 
@@ -71,6 +56,26 @@ namespace TicTacToeGame.Services
             }
 
             return ttt.IsFinished();
+        }
+
+        private string GenerateResultString()
+        {
+            var resultString = string.Empty;
+            // show message
+            switch (ttt.result)
+            {
+                case WinnerOption.Tie:
+                    resultString = "Padł remis.";
+                    break;
+                case WinnerOption.XPlayer:
+                    resultString = "Wygrał gracz niebieski.";
+                    break;
+                case WinnerOption.OPlayer:
+                    resultString = "Wygrał gracz czerwony.";
+                    break;
+            }
+
+            return resultString;
         }
     }
 }
