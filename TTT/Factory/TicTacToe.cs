@@ -11,6 +11,8 @@ namespace WinFormsApp1
 
         public Form1(ITicTacToeManager manager)
         {
+            log.Info("App is initializing.");
+
             InitializeComponent();
             this.manager = manager;
 
@@ -48,6 +50,8 @@ namespace WinFormsApp1
         {
             log.Info("App is refreshing.");
 
+            manager.RestartInstance();
+
             UIHelper.ClearButtons(
                 button1,
                 button2,
@@ -58,8 +62,6 @@ namespace WinFormsApp1
                 button7,
                 button8,
                 button9);
-
-            manager.RestartInstance();
 
             log.Info("App refreshed.");
         }
