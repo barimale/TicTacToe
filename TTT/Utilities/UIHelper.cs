@@ -1,6 +1,4 @@
-﻿using Microsoft.VisualBasic.Devices;
-
-namespace TicTacToeGame.Utilities
+﻿namespace TicTacToeGame.Utilities
 {
     internal static class UIHelper
     {
