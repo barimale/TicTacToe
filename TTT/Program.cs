@@ -1,5 +1,6 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using TicTacToeGame.Factory;
 using TicTacToeGame.Services;
 using TicTacToeGame.Services.Contract;
 using WinFormsApp1;
@@ -20,9 +21,10 @@ namespace TicTacToeGame
 
             var host = CreateHostBuilder().Build();
             ServiceProvider = host.Services;
+            var formFactory = new FormFactory(ServiceProvider);
 
             ApplicationConfiguration.Initialize();
-            Application.Run(ServiceProvider.GetRequiredService<Form1>());
+            Application.Run(formFactory.CreateTTTForm());
         }
 
         public static IServiceProvider ServiceProvider { get; private set; }
@@ -33,6 +35,8 @@ namespace TicTacToeGame
                 .ConfigureServices((context, services) => {
                     services.AddTransient<ITicTacTocService, TicTacTocService>();
                     services.AddTransient<ITicTacToeManager, TicTacToeManager>();
+
+                    services.AddTransient<IFormFactory, FormFactory>();
                     services.AddTransient<Form1>();
                 });
         }
