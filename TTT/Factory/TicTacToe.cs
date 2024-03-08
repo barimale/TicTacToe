@@ -63,6 +63,9 @@ namespace WinFormsApp1
                 button8,
                 button9);
 
+            // unfocus the last choosen button
+            this.ActiveControl = null;
+
             log.Info("App refreshed.");
         }
 
