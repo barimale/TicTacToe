@@ -5,3 +5,6 @@ https://www.nuget.org/packages/TicTacToe
 ```
 But, as it was a typo in the source code, 
 an additional folder is added, which contains corrections.
+
+# Option
+Possible to publish as a single file.
