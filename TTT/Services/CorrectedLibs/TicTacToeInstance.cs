@@ -1,6 +1,6 @@
 ﻿namespace TicTacToeGame.Services.CorrectedLibs
 {
-    internal class TicTacToeInstanceCorrected
+    internal class TicTacToeInstance
     {
         private bool XTurn { get; set; } = true;
 

@@ -4,7 +4,7 @@ namespace TicTacToeGame.Services
 {
     internal class TicTacTocService
     {
-        private TicTacToeInstanceCorrected ttt;
+        private TicTacToeInstance ttt;
         public WinnerOption? result;
 
         public TicTacTocService()
@@ -16,7 +16,7 @@ namespace TicTacToeGame.Services
 
         public void RestartInstance()
         {
-            ttt = new TicTacToeInstanceCorrected();
+            ttt = new TicTacToeInstance();
             result = null;
         }
 
