@@ -1,4 +1,4 @@
-﻿namespace TicTacToeGame.Services.CorrectedLibs
+﻿namespace TicTacToeGame.Services.CorrectedLib
 {
     public enum BoardStateOptions
     {
