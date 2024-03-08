@@ -63,11 +63,11 @@ namespace WinFormsApp1
                 button8,
                 button9);
 
-            // unfocus the last choosen button
-            this.ActiveControl = null;
+            UIHelper.UnfocusAllButtons(this);
 
             log.Info("App refreshed.");
         }
+
 
         private void button1_Click(object sender, EventArgs e)
         {

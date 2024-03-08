@@ -21,5 +21,11 @@ namespace TicTacToeGame.Utilities
                 button.Enabled = true;
             }
         }
+
+        public static void UnfocusAllButtons(Form form)
+        {
+            form.ActiveControl = null;
+        }
+
     }
 }
