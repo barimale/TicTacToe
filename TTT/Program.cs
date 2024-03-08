@@ -1,6 +1,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using TicTacToeGame.Services;
+using TicTacToeGame.Services.Contract;
 using WinFormsApp1;
 
 namespace TicTacToeGame

@@ -1,4 +1,5 @@
-﻿using TicTacToeGame.Services.CorrectedLib;
+﻿using TicTacToeGame.Services.Contract;
+using TicTacToeGame.Services.CorrectedLib;
 
 namespace TicTacToeGame.Services
 {

@@ -1,5 +1,5 @@
 using SyslogLogging;
-using TicTacToeGame.Services;
+using TicTacToeGame.Services.Contract;
 using TicTacToeGame.Utilities;
 
 namespace WinFormsApp1
