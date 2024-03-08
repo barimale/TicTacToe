@@ -7,17 +7,17 @@ namespace WinFormsApp1
     public partial class Form1 : Form
     {
         private readonly ITicTacToeManager manager;
-        private LoggingModule log;
+        private readonly LoggingModule log;
 
         public Form1(ITicTacToeManager manager)
         {
+            log = new LoggingModule("tictactoegame-logs.txt");
+            log.Settings.FileLogging = FileLoggingMode.SingleLogFile;
+
             log.Info("App is initializing.");
 
             InitializeComponent();
             this.manager = manager;
-
-            log = new LoggingModule("tictactoegame-logs.txt");
-            log.Settings.FileLogging = FileLoggingMode.SingleLogFile;
 
             UIHelper.HideLabels(
                 button1,
