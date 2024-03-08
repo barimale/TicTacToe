@@ -1,4 +1,6 @@
-﻿namespace TicTacToeGame.Utilities
+﻿using Microsoft.VisualBasic.Devices;
+
+namespace TicTacToeGame.Utilities
 {
     internal static class UIHelper
     {
@@ -17,7 +19,6 @@
             {
                 button.BackColor = Color.White;
                 button.Enabled = true;
-                button.TabStop = false;
             }
         }
     }
