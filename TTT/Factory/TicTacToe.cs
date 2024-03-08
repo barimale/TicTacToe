@@ -44,8 +44,6 @@ namespace WinFormsApp1
             log.Info("App initialized.");
         }
 
-
-
         private void RefreshGame(object sender, EventArgs e)
         {
             log.Info("App is refreshing.");
@@ -67,7 +65,6 @@ namespace WinFormsApp1
 
             log.Info("App refreshed.");
         }
-
 
         private void button1_Click(object sender, EventArgs e)
         {
