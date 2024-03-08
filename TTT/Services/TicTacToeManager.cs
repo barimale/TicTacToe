@@ -2,13 +2,13 @@
 
 namespace TicTacToeGame.Services
 {
-    internal class TicTacToeManager
+    public class TicTacToeManager : ITicTacToeManager
     {
-        private TicTacTocService ttt;
+        private readonly ITicTacTocService ttt;
 
-        public TicTacToeManager()
+        public TicTacToeManager(ITicTacTocService ttt)
         {
-            ttt = new TicTacTocService();
+            this.ttt = ttt;
         }
 
         public void RestartInstance()
@@ -62,7 +62,7 @@ namespace TicTacToeGame.Services
         {
             var resultString = string.Empty;
             // show message
-            switch (ttt.result)
+            switch (ttt.Result)
             {
                 case WinnerOption.Tie:
                     resultString = "Padł remis.";

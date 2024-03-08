@@ -2,10 +2,12 @@
 
 namespace TicTacToeGame.Services
 {
-    internal class TicTacTocService
+    public class TicTacTocService : ITicTacTocService
     {
         private TicTacToeInstance ttt;
         public WinnerOption? result;
+
+        public WinnerOption? Result => result;
 
         public TicTacTocService()
         {

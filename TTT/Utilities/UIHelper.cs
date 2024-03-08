@@ -17,6 +17,7 @@
             {
                 button.BackColor = Color.White;
                 button.Enabled = true;
+                button.TabStop = false;
             }
         }
     }

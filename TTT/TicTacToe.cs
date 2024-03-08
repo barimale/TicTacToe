@@ -6,13 +6,13 @@ namespace WinFormsApp1
 {
     public partial class Form1 : Form
     {
-        private TicTacToeManager manager;
+        private readonly ITicTacToeManager manager;
         private LoggingModule log;
 
-        public Form1()
+        public Form1(ITicTacToeManager manager)
         {
             InitializeComponent();
-            manager = new TicTacToeManager();
+            this.manager = manager;
 
             log = new LoggingModule("tictactoegame-logs.txt");
             log.Settings.FileLogging = FileLoggingMode.SingleLogFile;
