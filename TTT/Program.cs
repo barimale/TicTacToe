@@ -3,6 +3,7 @@ using Microsoft.Extensions.Hosting;
 using TicTacToeGame.Factory;
 using TicTacToeGame.Services;
 using TicTacToeGame.Services.Contract;
+using TicTacToeGame.Services.TTT4x4;
 using WinFormsApp1;
 
 namespace TicTacToeGame
@@ -36,6 +37,7 @@ namespace TicTacToeGame
                     services.AddTransient<ITicTacTocService, TicTacTocService>();
                     services.AddTransient<ITicTacToeManager, TicTacToeManager>();
                     services.AddTransient<ITicTacToe4x4Manager, TicTacToe4x4Manager>();
+                    services.AddTransient<ITicTacToc4x4Service, TicTacToc4x4Service>();
 
                     services.AddTransient<IFormFactory, FormFactory>();
                     services.AddTransient<Form1>();

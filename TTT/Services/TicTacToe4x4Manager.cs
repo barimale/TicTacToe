@@ -1,15 +1,21 @@
 ﻿using TicTacToeGame.Services.Contract;
-using TicTacToeGame.Services.CorrectedLib;
+using TicTacToeGame.Services.TTT4x4;
 
 namespace TicTacToeGame.Services
 {
     public class TicTacToe4x4Manager : ITicTacToe4x4Manager
     {
-        private readonly ITicTacTocService ttt;
+        private readonly ITicTacToc4x4Service ttt;
 
-        public TicTacToe4x4Manager(ITicTacTocService ttt)
+        public TicTacToe4x4Manager(ITicTacToc4x4Service ttt)
         {
             this.ttt = ttt;
+            this.ttt.OnTurn += Ttt_OnTurn;
+        }
+
+        private void Ttt_OnTurn(object? sender, OnTurnArgs e)
+        {
+            // queues here 
         }
 
         public void RestartInstance()

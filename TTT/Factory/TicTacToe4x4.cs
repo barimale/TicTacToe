@@ -67,7 +67,7 @@ namespace TicTacToeGame.Factory
             this.CenterToScreen();
         }
 
-        private void rESTARTToolStripMenuItem_Click(object sender, EventArgs e)
+        private void RefreshGame(object sender, EventArgs e)
         {
             log.Info("App is refreshing.");
 
@@ -94,6 +94,294 @@ namespace TicTacToeGame.Factory
             UIHelper.UnfocusAllButtons(this);
 
             log.Info("App refreshed.");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                manager.buttonClickExecute(button1, 0, 0);
+            }
+            catch (Exception ex)
+            {
+                log.Critical(ex.Message);
+            }
+            finally
+            {
+                var result = manager.IsFinished();
+                if (result)
+                    RefreshGame(null, null);
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                manager.buttonClickExecute(button2, 0, 1);
+            }
+            catch (Exception ex)
+            {
+                log.Critical(ex.Message);
+            }
+            finally
+            {
+                var result = manager.IsFinished();
+                if (result)
+                    RefreshGame(null, null);
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                manager.buttonClickExecute(button3, 0, 2);
+            }
+            catch (Exception ex)
+            {
+                log.Critical(ex.Message);
+            }
+            finally
+            {
+                var result = manager.IsFinished();
+                if (result)
+                    RefreshGame(null, null);
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                manager.buttonClickExecute(button4, 0, 3);
+            }
+            catch (Exception ex)
+            {
+                log.Critical(ex.Message);
+            }
+            finally
+            {
+                var result = manager.IsFinished();
+                if (result)
+                    RefreshGame(null, null);
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                manager.buttonClickExecute(button5, 1, 0);
+            }
+            catch (Exception ex)
+            {
+                log.Critical(ex.Message);
+            }
+            finally
+            {
+                var result = manager.IsFinished();
+                if (result)
+                    RefreshGame(null, null);
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                manager.buttonClickExecute(button6, 1, 1);
+            }
+            catch (Exception ex)
+            {
+                log.Critical(ex.Message);
+            }
+            finally
+            {
+                var result = manager.IsFinished();
+                if (result)
+                    RefreshGame(null, null);
+            }
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                manager.buttonClickExecute(button10, 2, 1);
+            }
+            catch (Exception ex)
+            {
+                log.Critical(ex.Message);
+            }
+            finally
+            {
+                var result = manager.IsFinished();
+                if (result)
+                    RefreshGame(null, null);
+            }
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                manager.buttonClickExecute(button9, 2, 0);
+            }
+            catch (Exception ex)
+            {
+                log.Critical(ex.Message);
+            }
+            finally
+            {
+                var result = manager.IsFinished();
+                if (result)
+                    RefreshGame(null, null);
+            }
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                manager.buttonClickExecute(button7, 1, 2);
+            }
+            catch (Exception ex)
+            {
+                log.Critical(ex.Message);
+            }
+            finally
+            {
+                var result = manager.IsFinished();
+                if (result)
+                    RefreshGame(null, null);
+            }
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                manager.buttonClickExecute(button8, 1, 3);
+            }
+            catch (Exception ex)
+            {
+                log.Critical(ex.Message);
+            }
+            finally
+            {
+                var result = manager.IsFinished();
+                if (result)
+                    RefreshGame(null, null);
+            }
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                manager.buttonClickExecute(button11, 2, 2);
+            }
+            catch (Exception ex)
+            {
+                log.Critical(ex.Message);
+            }
+            finally
+            {
+                var result = manager.IsFinished();
+                if (result)
+                    RefreshGame(null, null);
+            }
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                manager.buttonClickExecute(button11, 2, 3);
+            }
+            catch (Exception ex)
+            {
+                log.Critical(ex.Message);
+            }
+            finally
+            {
+                var result = manager.IsFinished();
+                if (result)
+                    RefreshGame(null, null);
+            }
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                manager.buttonClickExecute(button13, 3, 0);
+            }
+            catch (Exception ex)
+            {
+                log.Critical(ex.Message);
+            }
+            finally
+            {
+                var result = manager.IsFinished();
+                if (result)
+                    RefreshGame(null, null);
+            }
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                manager.buttonClickExecute(button14, 3, 1);
+            }
+            catch (Exception ex)
+            {
+                log.Critical(ex.Message);
+            }
+            finally
+            {
+                var result = manager.IsFinished();
+                if (result)
+                    RefreshGame(null, null);
+            }
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                manager.buttonClickExecute(button15, 3, 2);
+            }
+            catch (Exception ex)
+            {
+                log.Critical(ex.Message);
+            }
+            finally
+            {
+                var result = manager.IsFinished();
+                if (result)
+                    RefreshGame(null, null);
+            }
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                manager.buttonClickExecute(button16, 3, 3);
+            }
+            catch (Exception ex)
+            {
+                log.Critical(ex.Message);
+            }
+            finally
+            {
+                var result = manager.IsFinished();
+                if (result)
+                    RefreshGame(null, null);
+            }
         }
     }
 }

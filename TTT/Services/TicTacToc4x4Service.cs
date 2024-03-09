@@ -1,16 +1,21 @@
-﻿using TicTacToeGame.Services.Contract;
-using TicTacToeGame.Services.TTT;
+﻿
+using System.Data.Common;
+using TicTacToeGame.Services.Contract;
+using TicTacToeGame.Services.TTT4x4;
 
 namespace TicTacToeGame.Services
 {
-    public class TicTacTocService : ITicTacTocService
+    public class TicTacToc4x4Service : ITicTacToc4x4Service
     {
-        private TicTacToeInstance ttt;
+        private TicTacToe4x4Instance ttt;
         public WinnerOption? result;
+
+        public event EventHandler<OnTurnArgs> OnTurn;
+
 
         public WinnerOption? Result => result;
 
-        public TicTacTocService()
+        public TicTacToc4x4Service()
         {
             RestartInstance();
         }
@@ -19,8 +24,17 @@ namespace TicTacToeGame.Services
 
         public void RestartInstance()
         {
-            ttt = new TicTacToeInstance();
+            ttt = new TicTacToe4x4Instance();
+            ttt.OnTurn += Ttt_OnTurn;
             result = null;
+        }
+
+        private void Ttt_OnTurn(object? sender, OnTurnArgs e)
+        {
+            if (OnTurn != null)
+            {
+                OnTurn.Invoke(sender, e);
+            }
         }
 
         public bool IsFinished()

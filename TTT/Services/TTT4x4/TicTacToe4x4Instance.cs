@@ -1,18 +1,21 @@
-﻿namespace TicTacToeGame.Services.CorrectedLib
+﻿using TicTacToeGame.Services.Contract;
+
+namespace TicTacToeGame.Services.TTT4x4
 {
-    internal class TicTacToeInstance
+    internal class TicTacToe4x4Instance : ITicTacToe4x4Instance
     {
+        public event EventHandler<OnTurnArgs> OnTurn;
+
         private bool XTurn { get; set; } = true;
-
-
         public bool Finished { get; internal set; } = false;
 
 
-        public BoardStateOptions[][] BoardState { get; internal set; } = new BoardStateOptions[3][]
+        public BoardStateOptions[][] BoardState { get; internal set; } = new BoardStateOptions[4][]
         {
-        new BoardStateOptions[3],
-        new BoardStateOptions[3],
-        new BoardStateOptions[3]
+        new BoardStateOptions[4],
+        new BoardStateOptions[4],
+        new BoardStateOptions[4],
+        new BoardStateOptions[4]
         };
 
 
@@ -39,6 +42,7 @@
             return winnerOption.HasValue;
         }
 
+        // WIP
         private WinnerOption? CheckCross1()
         {
             int num = 0;
@@ -50,7 +54,7 @@
                 }
             }
 
-            if (num >= 2 && BoardState[0][0] != 0)
+            if (num >= 3 && BoardState[0][0] != 0)
             {
                 return BoardState[0][0] != BoardStateOptions.X ? WinnerOption.OPlayer : WinnerOption.XPlayer;
             }
@@ -68,8 +72,8 @@
                     num++;
                 }
             }
-
-            if (num >= 2 && BoardState[0][2] != 0)
+            // WIP
+            if (num >= 3 && BoardState[0][3] != 0)
             {
                 return BoardState[0][BoardState.Length - 1] != BoardStateOptions.X ? WinnerOption.OPlayer : WinnerOption.XPlayer;
             }
@@ -79,19 +83,24 @@
 
         private WinnerOption? CheckRows()
         {
-            if (AllEqual(BoardState[0][0], BoardState[0][1], BoardState[0][2]) && BoardState[0][0] != 0)
+            if (AllEqual(BoardState[0][0], BoardState[0][1], BoardState[0][2], BoardState[0][3]) && BoardState[0][0] != 0)
             {
                 return BoardState[0][0] != BoardStateOptions.X ? WinnerOption.OPlayer : WinnerOption.XPlayer;
             }
 
-            if (AllEqual(BoardState[1][0], BoardState[1][1], BoardState[1][2]) && BoardState[1][0] != 0)
+            if (AllEqual(BoardState[1][0], BoardState[1][1], BoardState[1][2], BoardState[1][3]) && BoardState[1][0] != 0)
             {
                 return BoardState[1][0] != BoardStateOptions.X ? WinnerOption.OPlayer : WinnerOption.XPlayer;
             }
 
-            if (AllEqual(BoardState[2][0], BoardState[2][1], BoardState[2][2]) && BoardState[2][0] != 0)
+            if (AllEqual(BoardState[2][0], BoardState[2][1], BoardState[2][2], BoardState[2][3]) && BoardState[2][0] != 0)
             {
                 return BoardState[2][0] != BoardStateOptions.X ? WinnerOption.OPlayer : WinnerOption.XPlayer;
+            }
+
+            if (AllEqual(BoardState[3][0], BoardState[3][1], BoardState[3][2], BoardState[3][3]) && BoardState[3][0] != 0)
+            {
+                return BoardState[3][0] != BoardStateOptions.X ? WinnerOption.OPlayer : WinnerOption.XPlayer;
             }
 
             return null;
@@ -99,19 +108,24 @@
 
         private WinnerOption? CheckColumns()
         {
-            if (AllEqual(BoardState[0][0], BoardState[1][0], BoardState[2][0]) && BoardState[0][0] != 0)
+            if (AllEqual(BoardState[0][0], BoardState[1][0], BoardState[2][0], BoardState[3][0]) && BoardState[0][0] != 0)
             {
                 return BoardState[0][0] != BoardStateOptions.X ? WinnerOption.OPlayer : WinnerOption.XPlayer;
             }
 
-            if (AllEqual(BoardState[0][1], BoardState[1][1], BoardState[2][1]) && BoardState[0][1] != 0)
+            if (AllEqual(BoardState[0][1], BoardState[1][1], BoardState[2][1], BoardState[3][1]) && BoardState[0][1] != 0)
             {
                 return BoardState[0][1] != BoardStateOptions.X ? WinnerOption.OPlayer : WinnerOption.XPlayer;
             }
 
-            if (AllEqual(BoardState[0][2], BoardState[1][2], BoardState[2][2]) && BoardState[0][2] != 0)
+            if (AllEqual(BoardState[0][2], BoardState[1][2], BoardState[2][2], BoardState[3][2]) && BoardState[0][2] != 0)
             {
                 return BoardState[0][2] != BoardStateOptions.X ? WinnerOption.OPlayer : WinnerOption.XPlayer;
+            }
+
+            if (AllEqual(BoardState[0][3], BoardState[1][3], BoardState[2][3], BoardState[3][3]) && BoardState[0][3] != 0)
+            {
+                return BoardState[0][3] != BoardStateOptions.X ? WinnerOption.OPlayer : WinnerOption.XPlayer;
             }
 
             return null;
@@ -124,12 +138,12 @@
                 throw new Exception("Game finished.");
             }
 
-            if (row > 2)
+            if (row > 3)
             {
                 throw new IndexOutOfRangeException("The maximum row index can be 2");
             }
 
-            if (column > 2)
+            if (column > 3)
             {
                 throw new IndexOutOfRangeException("The maximum column index can be 2");
             }
@@ -137,6 +151,16 @@
             if (BoardState[row][column] != 0)
             {
                 throw new Exception("This field is not empty.");
+            }
+
+            if (OnTurn != null)
+            {
+                OnTurn.Invoke(null, new OnTurnArgs()
+                {
+                    Row = row,
+                    Column = column,
+                    XTurn = XTurn
+                });
             }
 
             BoardState[row][column] = XTurn ? BoardStateOptions.X : BoardStateOptions.O;

@@ -1,4 +1,4 @@
-﻿namespace TicTacToeGame.Services.CorrectedLib
+﻿namespace TicTacToeGame.Services.TTT
 {
     public enum WinnerOption
     {
