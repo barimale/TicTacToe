@@ -1,5 +1,6 @@
 ﻿using TicTacToeGame.Services.Contract;
 using TicTacToeGame.Services.TTT4x4;
+using TicTacToeGame.Utilities;
 
 namespace TicTacToeGame.Services
 {
@@ -7,10 +8,26 @@ namespace TicTacToeGame.Services
     public class TicTacToe4x4Manager : ITicTacToe4x4Manager
     {
         private readonly ITicTacToc4x4Service ttt;
+        public event EventHandler<OnTurnArgs> OnTurn;
 
+        // WIP queues here
         public TicTacToe4x4Manager(ITicTacToc4x4Service ttt)
         {
             this.ttt = ttt;
+            this.ttt.OnTurn += Ttt_OnTurn;
+        }
+
+        private void Ttt_OnTurn(object? sender, OnTurnArgs e)
+        {
+            // add to queue
+            // check length
+            // remove last one
+            // invoke dequeued one only
+
+            if (OnTurn != null)
+            {
+                OnTurn.Invoke(sender, e);
+            }
         }
 
         public void RestartInstance()
