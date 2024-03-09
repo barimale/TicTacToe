@@ -298,7 +298,7 @@ namespace TicTacToeGame.Factory
         {
             try
             {
-                manager.buttonClickExecute(button11, 2, 3);
+                manager.buttonClickExecute(button12, 2, 3);
             }
             catch (Exception ex)
             {
