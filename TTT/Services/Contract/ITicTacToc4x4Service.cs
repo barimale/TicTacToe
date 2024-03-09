@@ -10,6 +10,7 @@ namespace TicTacToeGame.Services.Contract
 
         bool IsFinished();
         void MakeOperation(int row, int column);
+        void ClearOperation(int row, int column);
         void RestartInstance();
     }
 }

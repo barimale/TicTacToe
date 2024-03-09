@@ -131,6 +131,11 @@ namespace TicTacToeGame.Services.TTT4x4
             return null;
         }
 
+        public void ClearOperation(int row, int column)
+        {
+            BoardState[row][column] = BoardStateOptions.Undefined;
+        }
+
         public WinnerOption? MakeOperation(int row, int column)
         {
             if (Finished)

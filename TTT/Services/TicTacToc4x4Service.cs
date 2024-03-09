@@ -46,5 +46,10 @@ namespace TicTacToeGame.Services
         {
             result = ttt.MakeOperation(row, column);
         }
+
+        public void ClearOperation(int row, int column)
+        {
+            ttt.ClearOperation(row, column);
+        }
     }
 }
