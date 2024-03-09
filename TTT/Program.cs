@@ -3,7 +3,6 @@ using Microsoft.Extensions.Hosting;
 using TicTacToeGame.Factory;
 using TicTacToeGame.Services;
 using TicTacToeGame.Services.Contract;
-using TicTacToeGame.Services.TTT4x4;
 using WinFormsApp1;
 
 namespace TicTacToeGame
@@ -24,8 +23,13 @@ namespace TicTacToeGame
             ServiceProvider = host.Services;
             var formFactory = new FormFactory(ServiceProvider);
 
+            var is4x4Choosen = args.Length > 0 && args[0] == "4x4";
+
             ApplicationConfiguration.Initialize();
-            Application.Run(formFactory.CreateTTT4x4Form()); // use args here
+            Application.Run(is4x4Choosen ?
+                                formFactory.CreateTTT4x4Form():
+                                formFactory.CreateTTTForm()
+                                );
         }
 
         public static IServiceProvider ServiceProvider { get; private set; }
