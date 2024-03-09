@@ -13,7 +13,7 @@ namespace TicTacToeGame
         ///  The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main()
+        static void Main(params string[] args)
         {
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
@@ -24,7 +24,7 @@ namespace TicTacToeGame
             var formFactory = new FormFactory(ServiceProvider);
 
             ApplicationConfiguration.Initialize();
-            Application.Run(formFactory.CreateTTTForm());
+            Application.Run(formFactory.CreateTTT4x4Form()); // use args here
         }
 
         public static IServiceProvider ServiceProvider { get; private set; }
@@ -35,9 +35,11 @@ namespace TicTacToeGame
                 .ConfigureServices((context, services) => {
                     services.AddTransient<ITicTacTocService, TicTacTocService>();
                     services.AddTransient<ITicTacToeManager, TicTacToeManager>();
+                    services.AddTransient<ITicTacToe4x4Manager, TicTacToe4x4Manager>();
 
                     services.AddTransient<IFormFactory, FormFactory>();
                     services.AddTransient<Form1>();
+                    services.AddTransient<Form2>();
                 });
         }
     }
