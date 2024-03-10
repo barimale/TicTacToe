@@ -1,16 +1,22 @@
 ﻿using TicTacToeGame.Services.Contract;
 using TicTacToeGame.Services.TTT4x4;
-using TicTacToeGame.Utilities;
 
 namespace TicTacToeGame.Services
 {
-
+    public class Move
+    {
+        public int Row { get; set; }
+        public int Column { get; set; }
+        public bool XTurn { get; set; }
+    }
     public class TicTacToe4x4Manager : ITicTacToe4x4Manager
     {
         private readonly ITicTacToc4x4Service ttt;
         public event EventHandler<OnTurnArgs> OnTurn;
 
-        // WIP queues here
+        private Queue<Move> XTurns = new Queue<Move>();
+        private Queue<Move> OTurns = new Queue<Move> ();
+
         public TicTacToe4x4Manager(ITicTacToc4x4Service ttt)
         {
             this.ttt = ttt;
@@ -19,14 +25,53 @@ namespace TicTacToeGame.Services
 
         private void Ttt_OnTurn(object? sender, OnTurnArgs e)
         {
-            // add to queue
-            // check length
-            // remove last one
-            // invoke dequeued one only
-
-            if (OnTurn != null)
+            if(e.XTurn)
             {
-                OnTurn.Invoke(sender, e);
+                XTurns.Enqueue(new Move()
+                {
+                    Row = e.Row,
+                    Column = e.Column,
+                    XTurn = e.XTurn
+                });
+
+                if(XTurns.Count == 5)
+                {
+                    if (OnTurn != null)
+                    {
+                        var removed = XTurns.Dequeue();
+                        ttt.ClearOperation(removed.Row, removed.Column);
+                        OnTurn.Invoke(sender, new OnTurnArgs()
+                        {
+                            Row = removed.Row,
+                            Column = removed.Column,
+                            XTurn = removed.XTurn
+                        });
+                    }
+                }
+            }
+            else
+            {
+                OTurns.Enqueue(new Move()
+                {
+                    Row = e.Row,
+                    Column = e.Column,
+                    XTurn = e.XTurn
+                });
+
+                if (OTurns.Count == 5)
+                {
+                    if (OnTurn != null)
+                    {
+                        var removed = OTurns.Dequeue();
+                        ttt.ClearOperation(removed.Row, removed.Column);
+                        OnTurn.Invoke(sender, new OnTurnArgs()
+                        {
+                            Row = removed.Row,
+                            Column = removed.Column,
+                            XTurn = removed.XTurn
+                        });
+                    }
+                }
             }
         }
 
