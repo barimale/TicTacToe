@@ -3,12 +3,6 @@ using TicTacToeGame.Services.TTT4x4;
 
 namespace TicTacToeGame.Services
 {
-    public class Move
-    {
-        public int Row { get; set; }
-        public int Column { get; set; }
-        public bool XTurn { get; set; }
-    }
     public class TicTacToe4x4Manager : ITicTacToe4x4Manager
     {
         private readonly ITicTacToc4x4Service ttt;
