@@ -72,6 +72,8 @@ namespace TicTacToeGame.Services
         public void RestartInstance()
         {
             ttt.RestartInstance();
+            XTurns.Clear();
+            OTurns.Clear();
         }
 
         public void buttonClickExecute(Button button, int row, int column)
