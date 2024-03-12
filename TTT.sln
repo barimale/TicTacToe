@@ -12,6 +12,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicTacToeGame.3x3", "TicTacToeGame.3x3\TicTacToeGame.3x3.csproj", "{CBF16BD7-BA6D-45B3-8113-F23BD1028D73}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicTacToeGame.4x4", "TicTacToeGame.4x4\TicTacToeGame.4x4.csproj", "{50222080-7A41-4AF9-9422-6803F3ADF470}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,6 +26,14 @@ Global
 		{846F66FD-DBA1-425B-B147-ADC927CBD30C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{846F66FD-DBA1-425B-B147-ADC927CBD30C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{846F66FD-DBA1-425B-B147-ADC927CBD30C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBF16BD7-BA6D-45B3-8113-F23BD1028D73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBF16BD7-BA6D-45B3-8113-F23BD1028D73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBF16BD7-BA6D-45B3-8113-F23BD1028D73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBF16BD7-BA6D-45B3-8113-F23BD1028D73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50222080-7A41-4AF9-9422-6803F3ADF470}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50222080-7A41-4AF9-9422-6803F3ADF470}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50222080-7A41-4AF9-9422-6803F3ADF470}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50222080-7A41-4AF9-9422-6803F3ADF470}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

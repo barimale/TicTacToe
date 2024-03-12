@@ -1,6 +1,6 @@
-﻿namespace TicTacToeGame.Services.TTT4x4
+﻿namespace TicTacToeGame._4x4
 {
-    public class OnTurnArgs : EventArgs
+    public class Move
     {
         public int Row { get; set; }
         public int Column { get; set; }

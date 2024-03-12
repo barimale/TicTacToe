@@ -1,6 +1,6 @@
-﻿using TicTacToeGame.Services.TTT4x4;
+﻿using TicTacToeGame._4x4;
 
-namespace TicTacToeGame.Services.Contract
+namespace TicTacToeGame.UIServices.Contract
 {
     public interface ITicTacToe4x4Manager
     {

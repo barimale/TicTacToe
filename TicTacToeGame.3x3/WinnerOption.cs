@@ -1,4 +1,4 @@
-﻿namespace TicTacToeGame.Services.TTT
+﻿namespace TicTacToeGame._3x3
 {
     public enum WinnerOption
     {

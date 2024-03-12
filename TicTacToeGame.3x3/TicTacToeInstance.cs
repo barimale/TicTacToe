@@ -1,6 +1,6 @@
-﻿namespace TicTacToeGame.Services.TTT
+﻿namespace TicTacToeGame._3x3
 {
-    internal class TicTacToeInstance
+    public class TicTacToeInstance
     {
         private bool XTurn { get; set; } = true;
 

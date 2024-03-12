@@ -1,4 +1,4 @@
-﻿using TicTacToeGame.Services.TTT;
+﻿using TicTacToeGame._3x3;
 
 namespace TicTacToeGame.Services.Contract
 {

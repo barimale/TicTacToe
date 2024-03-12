@@ -1,13 +1,11 @@
-﻿
-using System.Data.Common;
+﻿using TicTacToeGame._4x4;
 using TicTacToeGame.Services.Contract;
-using TicTacToeGame.Services.TTT4x4;
 
 namespace TicTacToeGame.Services
 {
     public class TicTacToc4x4Service : ITicTacToc4x4Service
     {
-        private TicTacToe4x4Instance ttt;
+        private ITicTacToe4x4Instance ttt;
         public WinnerOption? result;
 
         public event EventHandler<OnTurnArgs> OnTurn;

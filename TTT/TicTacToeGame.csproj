@@ -13,4 +13,9 @@
     <PackageReference Include="SyslogLogging" Version="2.0.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\TicTacToeGame.3x3\TicTacToeGame.3x3.csproj" />
+    <ProjectReference Include="..\TicTacToeGame.4x4\TicTacToeGame.4x4.csproj" />
+  </ItemGroup>
+
 </Project>

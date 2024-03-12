@@ -1,4 +1,4 @@
-﻿namespace TicTacToeGame.Services.TTT
+﻿namespace TicTacToeGame._4x4
 {
     public enum BoardStateOptions
     {

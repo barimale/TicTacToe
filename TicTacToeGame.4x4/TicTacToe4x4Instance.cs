@@ -1,8 +1,6 @@
-﻿using TicTacToeGame.Services.Contract;
-
-namespace TicTacToeGame.Services.TTT4x4
+﻿namespace TicTacToeGame._4x4
 {
-    internal class TicTacToe4x4Instance : ITicTacToe4x4Instance
+    public class TicTacToe4x4Instance : ITicTacToe4x4Instance
     {
         public event EventHandler<OnTurnArgs> OnTurn;
 

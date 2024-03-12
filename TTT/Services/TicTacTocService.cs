@@ -1,5 +1,5 @@
-﻿using TicTacToeGame.Services.Contract;
-using TicTacToeGame.Services.TTT;
+﻿using TicTacToeGame._3x3;
+using TicTacToeGame.Services.Contract;
 
 namespace TicTacToeGame.Services
 {

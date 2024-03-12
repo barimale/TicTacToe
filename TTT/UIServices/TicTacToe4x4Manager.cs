@@ -1,7 +1,8 @@
-﻿using TicTacToeGame.Services.Contract;
-using TicTacToeGame.Services.TTT4x4;
+﻿using TicTacToeGame._4x4;
+using TicTacToeGame.Services.Contract;
+using TicTacToeGame.UIServices.Contract;
 
-namespace TicTacToeGame.Services
+namespace TicTacToeGame.UIServices
 {
     public class TicTacToe4x4Manager : ITicTacToe4x4Manager
     {
@@ -9,7 +10,7 @@ namespace TicTacToeGame.Services
         public event EventHandler<OnTurnArgs> OnTurn;
 
         private Queue<Move> XTurns = new Queue<Move>();
-        private Queue<Move> OTurns = new Queue<Move> ();
+        private Queue<Move> OTurns = new Queue<Move>();
 
         public TicTacToe4x4Manager(ITicTacToc4x4Service ttt)
         {
@@ -19,7 +20,7 @@ namespace TicTacToeGame.Services
 
         private void Ttt_OnTurn(object? sender, OnTurnArgs e)
         {
-            if(e.XTurn)
+            if (e.XTurn)
             {
                 XTurns.Enqueue(new Move()
                 {
@@ -28,7 +29,7 @@ namespace TicTacToeGame.Services
                     XTurn = e.XTurn
                 });
 
-                if(XTurns.Count == 5)
+                if (XTurns.Count == 5)
                 {
                     if (OnTurn != null)
                     {

@@ -1,5 +1,6 @@
 ﻿using SyslogLogging;
-using TicTacToeGame.Services.Contract;
+using TicTacToeGame._4x4;
+using TicTacToeGame.UIServices.Contract;
 using TicTacToeGame.Utilities;
 
 namespace TicTacToeGame.Factory
@@ -59,7 +60,7 @@ namespace TicTacToeGame.Factory
             log.Info("App initialized.");
         }
 
-        private void Manager_OnTurn(object? sender, Services.TTT4x4.OnTurnArgs e)
+        private void Manager_OnTurn(object? sender, OnTurnArgs e)
         {
             if (e.Column == 0 && e.Row == 0)
             {

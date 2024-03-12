@@ -3,6 +3,8 @@ using Microsoft.Extensions.Hosting;
 using TicTacToeGame.Factory;
 using TicTacToeGame.Services;
 using TicTacToeGame.Services.Contract;
+using TicTacToeGame.UIServices;
+using TicTacToeGame.UIServices.Contract;
 using WinFormsApp1;
 
 namespace TicTacToeGame
