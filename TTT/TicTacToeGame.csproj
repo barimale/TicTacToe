@@ -9,6 +9,20 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\About.png" />
+    <None Remove="Images\Exit.png" />
+    <None Remove="Images\Explorer.png" />
+    <None Remove="Images\SystemTrayApp.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Images\About.png" />
+    <Content Include="Images\Exit.png" />
+    <Content Include="Images\Explorer.png" />
+    <Content Include="Images\SystemTrayApp.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
     <PackageReference Include="SyslogLogging" Version="2.0.2" />
   </ItemGroup>
@@ -16,6 +30,21 @@
   <ItemGroup>
     <ProjectReference Include="..\TicTacToeGame.3x3\TicTacToeGame.3x3.csproj" />
     <ProjectReference Include="..\TicTacToeGame.4x4\TicTacToeGame.4x4.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
 
 </Project>

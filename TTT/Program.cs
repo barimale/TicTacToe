@@ -1,5 +1,6 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using SystemTrayApp;
 using TicTacToeGame.Factory;
 using TicTacToeGame.Services;
 using TicTacToeGame.Services.Contract;
@@ -25,13 +26,35 @@ namespace TicTacToeGame
             ServiceProvider = host.Services;
             var formFactory = new FormFactory(ServiceProvider);
 
-            var is4x4Choosen = args.Length > 0 && args[0] == "4x4";
+            if(args.Length == 0)
+            {
+                using (MenuSysTray pi = new MenuSysTray(formFactory))
+                {
+                    pi.Display();
+                    Application.Run();
+                }
+
+                return;
+            }
 
             ApplicationConfiguration.Initialize();
-            Application.Run(is4x4Choosen ?
-                                formFactory.CreateTTT4x4Form():
-                                formFactory.CreateTTTForm()
-                                );
+
+            switch (args[0])
+            {
+                case "systray":
+                    using (MenuSysTray pi = new MenuSysTray(formFactory))
+                    {
+                        pi.Display();
+                        Application.Run();
+                    }
+                    break;
+                case "3x3":
+                    formFactory.CreateTTTForm();
+                    break;
+                case "4x4":
+                    formFactory.CreateTTT4x4Form();
+                    break;
+            }
         }
 
         public static IServiceProvider ServiceProvider { get; private set; }
