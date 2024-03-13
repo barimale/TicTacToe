@@ -14,10 +14,6 @@ namespace SystemTrayApp.Menu._2_About
         {
             this.formFactory = formFactory;
         }
-        /// <summary>
-        /// Is displayed?
-        /// </summary>
-        bool isLoaded = false;
 
 		/// <summary>
 		/// Creates this instance.
@@ -31,7 +27,7 @@ namespace SystemTrayApp.Menu._2_About
 			// About.
 			item = new ToolStripMenuItem();
 			item.Text = "TicTacToe 3x3";
-			item.Click += new EventHandler(About_Click);
+			item.Click += new EventHandler(_3x_3_Click);
 			item.Image = Resources.About;
 
 			return item;
@@ -42,14 +38,9 @@ namespace SystemTrayApp.Menu._2_About
 		/// </summary>
 		/// <param name="sender">The source of the event.</param>
 		/// <param name="e">The <see cref="System.EventArgs"/> instance containing the event data.</param>
-		public void About_Click(object sender, EventArgs e)
+		public void _3x_3_Click(object sender, EventArgs e)
 		{
-			if (!isLoaded)
-			{
-                isLoaded = true;
-                formFactory.CreateTTTForm().Show(); // formfactory here
-                isLoaded = false;
-			}
-		}
-	}
+            formFactory.CreateTTTForm().Show(); // formfactory here
+        }
+    }
 }

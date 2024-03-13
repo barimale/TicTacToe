@@ -10,8 +10,8 @@ namespace SystemTrayApp
 	{
         private readonly IFormFactory formFactory;
 
-        private readonly TTT_3x_3MenuItem explorer;
-		private readonly TTT_4x_4MenuItem about;
+        private readonly TTT_3x_3MenuItem _3x_3tictactoe;
+		private readonly TTT_4x_4MenuItem _4x_4tictactoe;
         private readonly ExitMenuItem exit;
         private readonly SeparatorMenuItem separator;
 
@@ -24,8 +24,8 @@ namespace SystemTrayApp
         public ContextMenu(IFormFactory formFactory): this()
         {
             this.formFactory = formFactory;
-            explorer = new TTT_3x_3MenuItem(this.formFactory);
-            about = new TTT_4x_4MenuItem(this.formFactory);
+            _3x_3tictactoe = new TTT_3x_3MenuItem(this.formFactory);
+            _4x_4tictactoe = new TTT_4x_4MenuItem(this.formFactory);
         }
 
         /// <summary>
@@ -37,8 +37,8 @@ namespace SystemTrayApp
 			// Add the default menu options.
 			ContextMenuStrip menu = new ContextMenuStrip();
 
-			menu.Items.Add(explorer.Create());
-            menu.Items.Add(about.Create());
+			menu.Items.Add(_3x_3tictactoe.Create());
+            menu.Items.Add(_4x_4tictactoe.Create());
 			menu.Items.Add(separator.Create());
 			menu.Items.Add(exit.Create());
 
