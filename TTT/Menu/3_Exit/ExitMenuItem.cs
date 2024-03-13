@@ -1,4 +1,4 @@
-﻿using TicTacToeGame;
+﻿using TicTacToeGame.SysTray;
 
 namespace SystemTrayApp
 {

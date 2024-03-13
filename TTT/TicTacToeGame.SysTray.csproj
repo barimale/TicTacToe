@@ -28,8 +28,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TicTacToeGame.3x3\TicTacToeGame.3x3.csproj" />
-    <ProjectReference Include="..\TicTacToeGame.4x4\TicTacToeGame.4x4.csproj" />
+    <ProjectReference Include="..\TTTControlLibrary\TTTControlLibrary.csproj" />
   </ItemGroup>
 
   <ItemGroup>

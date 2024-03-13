@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34616.47
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicTacToeGame", "TTT\TicTacToeGame.csproj", "{846F66FD-DBA1-425B-B147-ADC927CBD30C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicTacToeGame.SysTray", "TTT\TicTacToeGame.SysTray.csproj", "{846F66FD-DBA1-425B-B147-ADC927CBD30C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8F7C283B-9372-4874-87EF-2112E90695A4}"
 	ProjectSection(SolutionItems) = preProject
@@ -12,9 +12,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicTacToeGame.3x3", "TicTacToeGame.3x3\TicTacToeGame.3x3.csproj", "{CBF16BD7-BA6D-45B3-8113-F23BD1028D73}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicTacToeGame.3x3", "TicTacToeGame.3x3\TicTacToeGame.3x3.csproj", "{CBF16BD7-BA6D-45B3-8113-F23BD1028D73}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicTacToeGame.4x4", "TicTacToeGame.4x4\TicTacToeGame.4x4.csproj", "{50222080-7A41-4AF9-9422-6803F3ADF470}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicTacToeGame.4x4", "TicTacToeGame.4x4\TicTacToeGame.4x4.csproj", "{50222080-7A41-4AF9-9422-6803F3ADF470}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTTControlLibrary", "TTTControlLibrary\TTTControlLibrary.csproj", "{0EB517EC-C95D-49DA-8AA1-D89B9CBE8B01}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -34,6 +36,10 @@ Global
 		{50222080-7A41-4AF9-9422-6803F3ADF470}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{50222080-7A41-4AF9-9422-6803F3ADF470}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{50222080-7A41-4AF9-9422-6803F3ADF470}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EB517EC-C95D-49DA-8AA1-D89B9CBE8B01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EB517EC-C95D-49DA-8AA1-D89B9CBE8B01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EB517EC-C95D-49DA-8AA1-D89B9CBE8B01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EB517EC-C95D-49DA-8AA1-D89B9CBE8B01}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,5 +1,5 @@
-﻿using TicTacToeGame;
-using TicTacToeGame.Factory;
+﻿using TicTacToeGame.Factory;
+using TicTacToeGame.SysTray;
 
 namespace SystemTrayApp.Menu._2_About
 {
