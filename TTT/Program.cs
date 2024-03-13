@@ -45,7 +45,6 @@ namespace TicTacToeGame
                     services.AddTransient<ITicTacToe4x4Manager, TicTacToe4x4Manager>();
                     services.AddTransient<ITicTacToc4x4Service, TicTacToc4x4Service>();
 
-                    //services.AddTransient<IFormFactory, FormFactory>();
                     services.AddTransient<Form1>();
                     services.AddTransient<Form2>();
                 });
