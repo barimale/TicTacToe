@@ -25,35 +25,12 @@ namespace TicTacToeGame
             var host = CreateHostBuilder().Build();
             ServiceProvider = host.Services;
             var formFactory = new FormFactory(ServiceProvider);
-
-            if(args.Length == 0)
-            {
-                using (MenuSysTray pi = new MenuSysTray(formFactory))
-                {
-                    pi.Display();
-                    Application.Run();
-                }
-
-                return;
-            }
-
             ApplicationConfiguration.Initialize();
 
-            switch (args[0])
+            using (MenuSysTray pi = new MenuSysTray(formFactory))
             {
-                case "systray":
-                    using (MenuSysTray pi = new MenuSysTray(formFactory))
-                    {
-                        pi.Display();
-                        Application.Run();
-                    }
-                    break;
-                case "3x3":
-                    formFactory.CreateTTTForm();
-                    break;
-                case "4x4":
-                    formFactory.CreateTTT4x4Form();
-                    break;
+                pi.Display();
+                Application.Run();
             }
         }
 
@@ -68,7 +45,7 @@ namespace TicTacToeGame
                     services.AddTransient<ITicTacToe4x4Manager, TicTacToe4x4Manager>();
                     services.AddTransient<ITicTacToc4x4Service, TicTacToc4x4Service>();
 
-                    services.AddTransient<IFormFactory, FormFactory>();
+                    //services.AddTransient<IFormFactory, FormFactory>();
                     services.AddTransient<Form1>();
                     services.AddTransient<Form2>();
                 });
