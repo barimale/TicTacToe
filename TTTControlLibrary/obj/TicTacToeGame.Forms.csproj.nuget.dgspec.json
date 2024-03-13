@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "G:\\TicTacToe\\TTTControlLibrary\\TTTControlLibrary.csproj": {}
+    "G:\\TicTacToe\\TTTControlLibrary\\TicTacToeGame.Forms.csproj": {}
   },
   "projects": {
     "G:\\TicTacToe\\TicTacToeGame.3x3\\TicTacToeGame.3x3.Service.csproj": {
@@ -126,12 +126,12 @@
         }
       }
     },
-    "G:\\TicTacToe\\TTTControlLibrary\\TTTControlLibrary.csproj": {
+    "G:\\TicTacToe\\TTTControlLibrary\\TicTacToeGame.Forms.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\TicTacToe\\TTTControlLibrary\\TTTControlLibrary.csproj",
-        "projectName": "TTTControlLibrary",
-        "projectPath": "G:\\TicTacToe\\TTTControlLibrary\\TTTControlLibrary.csproj",
+        "projectUniqueName": "G:\\TicTacToe\\TTTControlLibrary\\TicTacToeGame.Forms.csproj",
+        "projectName": "TicTacToeGame.Forms",
+        "projectPath": "G:\\TicTacToe\\TTTControlLibrary\\TicTacToeGame.Forms.csproj",
         "packagesPath": "C:\\Users\\mateu\\.nuget\\packages\\",
         "outputPath": "G:\\TicTacToe\\TTTControlLibrary\\obj\\",
         "projectStyle": "PackageReference",

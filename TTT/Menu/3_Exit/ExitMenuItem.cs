@@ -24,7 +24,6 @@ namespace SystemTrayApp
         /// <param name="e">The <see cref="System.EventArgs"/> instance containing the event data.</param>
         public void Exit_Click(object sender, EventArgs e)
 		{
-			// Quit without further ado.
 			Application.Exit();
 		}
 	}

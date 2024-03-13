@@ -26,7 +26,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TTTControlLibrary\TTTControlLibrary.csproj" />
+    <ProjectReference Include="..\TTTControlLibrary\TicTacToeGame.Forms.csproj" />
   </ItemGroup>
 
   <ItemGroup>

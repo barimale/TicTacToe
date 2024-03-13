@@ -674,24 +674,24 @@
           "buildTransitive/net6.0/System.Text.Json.targets": {}
         }
       },
-      "TicTacToeGame.3x3/1.0.0": {
+      "TicTacToeGame.3x3.Service/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "compile": {
-          "bin/placeholder/TicTacToeGame.3x3.dll": {}
+          "bin/placeholder/TicTacToeGame.3x3.Service.dll": {}
         },
         "runtime": {
-          "bin/placeholder/TicTacToeGame.3x3.dll": {}
+          "bin/placeholder/TicTacToeGame.3x3.Service.dll": {}
         }
       },
-      "TicTacToeGame.4x4/1.0.0": {
+      "TicTacToeGame.4x4.Service/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "compile": {
-          "bin/placeholder/TicTacToeGame.4x4.dll": {}
+          "bin/placeholder/TicTacToeGame.4x4.Service.dll": {}
         },
         "runtime": {
-          "bin/placeholder/TicTacToeGame.4x4.dll": {}
+          "bin/placeholder/TicTacToeGame.4x4.Service.dll": {}
         }
       }
     }
@@ -1781,23 +1781,23 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "TicTacToeGame.3x3/1.0.0": {
+    "TicTacToeGame.3x3.Service/1.0.0": {
       "type": "project",
-      "path": "../TicTacToeGame.3x3/TicTacToeGame.3x3.csproj",
-      "msbuildProject": "../TicTacToeGame.3x3/TicTacToeGame.3x3.csproj"
+      "path": "../TicTacToeGame.3x3/TicTacToeGame.3x3.Service.csproj",
+      "msbuildProject": "../TicTacToeGame.3x3/TicTacToeGame.3x3.Service.csproj"
     },
-    "TicTacToeGame.4x4/1.0.0": {
+    "TicTacToeGame.4x4.Service/1.0.0": {
       "type": "project",
-      "path": "../TicTacToeGame.4x4/TicTacToeGame.4x4.csproj",
-      "msbuildProject": "../TicTacToeGame.4x4/TicTacToeGame.4x4.csproj"
+      "path": "../TicTacToeGame.4x4/TicTacToeGame.4x4.Service.csproj",
+      "msbuildProject": "../TicTacToeGame.4x4/TicTacToeGame.4x4.Service.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0-windows7.0": [
       "Microsoft.Extensions.Hosting >= 8.0.0",
       "SyslogLogging >= 2.0.2",
-      "TicTacToeGame.3x3 >= 1.0.0",
-      "TicTacToeGame.4x4 >= 1.0.0"
+      "TicTacToeGame.3x3.Service >= 1.0.0",
+      "TicTacToeGame.4x4.Service >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -1806,9 +1806,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\TicTacToe\\TTTControlLibrary\\TTTControlLibrary.csproj",
-      "projectName": "TTTControlLibrary",
-      "projectPath": "G:\\TicTacToe\\TTTControlLibrary\\TTTControlLibrary.csproj",
+      "projectUniqueName": "G:\\TicTacToe\\TTTControlLibrary\\TicTacToeGame.Forms.csproj",
+      "projectName": "TicTacToeGame.Forms",
+      "projectPath": "G:\\TicTacToe\\TTTControlLibrary\\TicTacToeGame.Forms.csproj",
       "packagesPath": "C:\\Users\\mateu\\.nuget\\packages\\",
       "outputPath": "G:\\TicTacToe\\TTTControlLibrary\\obj\\",
       "projectStyle": "PackageReference",
@@ -1828,11 +1828,11 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "projectReferences": {
-            "G:\\TicTacToe\\TicTacToeGame.3x3\\TicTacToeGame.3x3.csproj": {
-              "projectPath": "G:\\TicTacToe\\TicTacToeGame.3x3\\TicTacToeGame.3x3.csproj"
+            "G:\\TicTacToe\\TicTacToeGame.3x3\\TicTacToeGame.3x3.Service.csproj": {
+              "projectPath": "G:\\TicTacToe\\TicTacToeGame.3x3\\TicTacToeGame.3x3.Service.csproj"
             },
-            "G:\\TicTacToe\\TicTacToeGame.4x4\\TicTacToeGame.4x4.csproj": {
-              "projectPath": "G:\\TicTacToe\\TicTacToeGame.4x4\\TicTacToeGame.4x4.csproj"
+            "G:\\TicTacToe\\TicTacToeGame.4x4\\TicTacToeGame.4x4.Service.csproj": {
+              "projectPath": "G:\\TicTacToe\\TicTacToeGame.4x4\\TicTacToeGame.4x4.Service.csproj"
             }
           }
         }

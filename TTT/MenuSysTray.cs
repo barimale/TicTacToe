@@ -21,7 +21,6 @@ namespace SystemTrayApp
         public MenuSysTray(IFormFactory formFactory)
 		{
 			this.formFactory = formFactory;
-            // Instantiate the NotifyIcon object.
             ni = new NotifyIcon();
 		}
 
@@ -30,12 +29,9 @@ namespace SystemTrayApp
 		/// </summary>
 		public void Display()
 		{
-			// Put the icon in the system tray and allow it react to mouse clicks.			
-			ni.Icon = Resources.SystemTrayApp;
+			ni.Icon = Resources._4x4;
 			ni.Text = "System Tray Utility Application Demonstration Program";
 			ni.Visible = true;
-
-			// Attach a context menu.
 			ni.ContextMenuStrip = new ContextMenu(this.formFactory).Create();
 		}
 
@@ -44,7 +40,6 @@ namespace SystemTrayApp
 		/// </summary>
 		public void Dispose()
 		{
-			// When the application closes, this will remove the icon from the system tray immediately.
 			ni.Dispose();
 		}
 	}

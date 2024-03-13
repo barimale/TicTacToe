@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "iPQVLT0cWnaslnPERL2AfPR3k31jvAeNAWwuTOupRNRYg1yMevmNeKa/72oLwksU35CKmZ3DGBOg3AUfo6OhNA==",
+  "dgSpecHash": "21ykxYjYXWEGRT9/Ide1NHxUUEwDUNUXz5GIyAwSC5N0zmTbMD/nSCt4xolMSSKQRXzzvk6ceOSNJ77GKfn9sA==",
   "success": true,
-  "projectFilePath": "G:\\TicTacToe\\TTTControlLibrary\\TTTControlLibrary.csproj",
+  "projectFilePath": "G:\\TicTacToe\\TTTControlLibrary\\TicTacToeGame.Forms.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mateu\\.nuget\\packages\\microsoft.extensions.configuration\\8.0.0\\microsoft.extensions.configuration.8.0.0.nupkg.sha512",
     "C:\\Users\\mateu\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0\\microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
