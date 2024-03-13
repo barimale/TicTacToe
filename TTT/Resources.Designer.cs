@@ -61,12 +61,32 @@ namespace TicTacToeGame.SysTray {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _3x3 {
+            get {
+                object obj = ResourceManager.GetObject("_3x3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
         internal static System.Drawing.Icon _4x4 {
             get {
                 object obj = ResourceManager.GetObject("_4x4", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _4x41 {
+            get {
+                object obj = ResourceManager.GetObject("_4x41", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         

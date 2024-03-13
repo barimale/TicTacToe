@@ -28,7 +28,7 @@ namespace SystemTrayApp.Menu._2_About
 			item = new ToolStripMenuItem();
 			item.Text = "TicTacToe 4x4";
 			item.Click += new EventHandler(_4x_4_Click);
-			item.Image = Resources.About;
+			item.Image = Resources._4x41;
 
 			return item;
 		}
