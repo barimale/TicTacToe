@@ -30,7 +30,7 @@ namespace SystemTrayApp
 		public void Display()
 		{
 			ni.Icon = Resources._4x4;
-			ni.Text = "System Tray Utility Application Demonstration Program";
+			ni.Text = "System Tray Tic Tac Toe";
 			ni.Visible = true;
 			ni.ContextMenuStrip = new ContextMenu(this.formFactory).Create();
 		}
