@@ -11,14 +11,12 @@
   <ItemGroup>
     <None Remove="Images\About.png" />
     <None Remove="Images\Exit.png" />
-    <None Remove="Images\Explorer.png" />
     <None Remove="Images\SystemTrayApp.ico" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Include="Images\About.png" />
     <Content Include="Images\Exit.png" />
-    <Content Include="Images\Explorer.png" />
     <Content Include="Images\SystemTrayApp.ico" />
   </ItemGroup>
 
