@@ -12,8 +12,12 @@ namespace TicTacToeGame.Factory
 
         public Form2(ITicTacToe4x4Manager manager)
         {
-            log = new LoggingModule("tictactoegame-4x4-logs.txt");
-            log.Settings.FileLogging = FileLoggingMode.SingleLogFile;
+            var fileName = Path.Combine(Environment.GetFolderPath(
+                Environment
+                .SpecialFolder
+                .ApplicationData), "tictactoegame-4x4-logs.txt");
+
+            log = new LoggingModule(fileName); log.Settings.FileLogging = FileLoggingMode.SingleLogFile;
 
             log.Info("App is initializing.");
 

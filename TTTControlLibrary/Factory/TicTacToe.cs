@@ -11,7 +11,12 @@ namespace WinFormsApp1
 
         public Form1(ITicTacToeManager manager)
         {
-            log = new LoggingModule("tictactoegame-logs.txt");
+            var fileName = Path.Combine(Environment.GetFolderPath(
+                Environment
+                .SpecialFolder
+                .ApplicationData), "tictactoegame-logs.txt");
+
+            log = new LoggingModule(fileName);
             log.Settings.FileLogging = FileLoggingMode.SingleLogFile;
 
             log.Info("App is initializing.");
