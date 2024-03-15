@@ -1,5 +1,4 @@
-﻿using TicTacToeGame._4x4;
-using TicTacToeGame._4x4.Contract;
+﻿using TicTacToeGame._4x4.Contract;
 using TicTacToeGame._4x4.Model;
 using TicTacToeGame.Forms.Services.Contract;
 
@@ -25,9 +24,9 @@ namespace TicTacToeGame.Forms.Services
 
         public void RestartInstance()
         {
-            ttt.CleanInstance();
-            ttt.OnTurn += Ttt_OnTurn;
-            result = null;
+            this.ttt.CleanInstance();
+            this.ttt.OnTurn += Ttt_OnTurn;
+            this.result = null;
         }
 
         private void Ttt_OnTurn(object? sender, OnTurnArgs e)
