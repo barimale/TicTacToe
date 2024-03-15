@@ -8,7 +8,7 @@ namespace TicTacToeGame._4x4.Contract
         bool Finished { get; }
 
         event EventHandler<OnTurnArgs> OnTurn;
-
+        void CleanInstance();
         void ClearOperation(int row, int column);
         WinnerOption? MakeOperation(int row, int column);
     }

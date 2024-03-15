@@ -20,6 +20,7 @@ namespace TicTacToeGame._4x4
             new BoardStateOptions[4],
             new BoardStateOptions[4]
             };
+            OnTurn = null;
         }
 
         public BoardStateOptions[][] BoardState { get; internal set; } = new BoardStateOptions[4][]

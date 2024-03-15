@@ -15,8 +15,9 @@ namespace TicTacToeGame.Forms.Services
 
         public WinnerOption? Result => result;
 
-        public TicTacToc4x4Service()
+        public TicTacToc4x4Service(ITicTacToe4x4Instance ttt)
         {
+            this.ttt = ttt;
             RestartInstance();
         }
 
@@ -24,7 +25,7 @@ namespace TicTacToeGame.Forms.Services
 
         public void RestartInstance()
         {
-            ttt = new TicTacToe4x4Instance();
+            ttt.CleanInstance();
             ttt.OnTurn += Ttt_OnTurn;
             result = null;
         }

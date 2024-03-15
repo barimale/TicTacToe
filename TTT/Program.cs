@@ -1,5 +1,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using TicTacToeGame._4x4;
+using TicTacToeGame._4x4.Contract;
 using TicTacToeGame.Factory;
 using TicTacToeGame.Forms.Factory;
 using TicTacToeGame.Forms.Services;
@@ -45,6 +47,7 @@ namespace TicTacToeGame.SysTray
                     services.AddTransient<ITicTacToeManager, TicTacToeManager>();
                     services.AddTransient<ITicTacToe4x4Manager, TicTacToe4x4Manager>();
                     services.AddTransient<ITicTacToc4x4Service, TicTacToc4x4Service>();
+                    services.AddTransient<ITicTacToe4x4Instance, TicTacToe4x4Instance>();
 
                     services.AddTransient<Form1>();
                     services.AddTransient<Form2>();
