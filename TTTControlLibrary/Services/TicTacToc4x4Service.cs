@@ -1,7 +1,9 @@
 ﻿using TicTacToeGame._4x4;
-using TicTacToeGame.Services.Contract;
+using TicTacToeGame._4x4.Contract;
+using TicTacToeGame._4x4.Model;
+using TicTacToeGame.Forms.Services.Contract;
 
-namespace TicTacToeGame.Services
+namespace TicTacToeGame.Forms.Services
 {
     public class TicTacToc4x4Service : ITicTacToc4x4Service
     {

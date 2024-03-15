@@ -1,14 +1,14 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using SystemTrayApp;
 using TicTacToeGame.Factory;
-using TicTacToeGame.Services;
-using TicTacToeGame.Services.Contract;
-using TicTacToeGame.UIServices;
-using TicTacToeGame.UIServices.Contract;
+using TicTacToeGame.Forms.Factory;
+using TicTacToeGame.Forms.Services;
+using TicTacToeGame.Forms.Services.Contract;
+using TicTacToeGame.Forms.UIServices;
+using TicTacToeGame.Forms.UIServices.Contract;
 using WinFormsApp1;
 
-namespace TicTacToeGame
+namespace TicTacToeGame.SysTray
 {
     internal static class Program
     {
@@ -39,7 +39,8 @@ namespace TicTacToeGame
         static IHostBuilder CreateHostBuilder()
         {
             return Host.CreateDefaultBuilder()
-                .ConfigureServices((context, services) => {
+                .ConfigureServices((context, services) =>
+                {
                     services.AddTransient<ITicTacTocService, TicTacTocService>();
                     services.AddTransient<ITicTacToeManager, TicTacToeManager>();
                     services.AddTransient<ITicTacToe4x4Manager, TicTacToe4x4Manager>();

@@ -1,4 +1,7 @@
-﻿namespace TicTacToeGame._4x4
+﻿using TicTacToeGame._4x4.Contract;
+using TicTacToeGame._4x4.Model;
+
+namespace TicTacToeGame._4x4
 {
     public class TicTacToe4x4Instance : ITicTacToe4x4Instance
     {

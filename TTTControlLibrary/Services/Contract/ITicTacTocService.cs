@@ -1,6 +1,6 @@
-﻿using TicTacToeGame._3x3;
+﻿using TicTacToeGame._3x3.Model;
 
-namespace TicTacToeGame.Services.Contract
+namespace TicTacToeGame.Forms.Services.Contract
 {
     public interface ITicTacTocService
     {

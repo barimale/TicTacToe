@@ -1,7 +1,8 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using TicTacToeGame.Factory;
 using WinFormsApp1;
 
-namespace TicTacToeGame.Factory
+namespace TicTacToeGame.Forms.Factory
 {
     public interface IFormFactory
     {

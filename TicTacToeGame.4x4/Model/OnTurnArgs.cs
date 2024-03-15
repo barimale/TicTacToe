@@ -1,4 +1,4 @@
-﻿namespace TicTacToeGame._4x4
+﻿namespace TicTacToeGame._4x4.Model
 {
     public class OnTurnArgs : EventArgs
     {

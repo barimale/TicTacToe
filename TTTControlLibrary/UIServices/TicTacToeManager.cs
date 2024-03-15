@@ -1,8 +1,8 @@
-﻿using TicTacToeGame._3x3;
-using TicTacToeGame.Services.Contract;
-using TicTacToeGame.UIServices.Contract;
+﻿using TicTacToeGame._3x3.Model;
+using TicTacToeGame.Forms.Services.Contract;
+using TicTacToeGame.Forms.UIServices.Contract;
 
-namespace TicTacToeGame.UIServices
+namespace TicTacToeGame.Forms.UIServices
 {
     public class TicTacToeManager : ITicTacToeManager
     {

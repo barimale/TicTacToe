@@ -1,4 +1,4 @@
-﻿namespace TicTacToeGame.UIServices.Contract
+﻿namespace TicTacToeGame.Forms.UIServices.Contract
 {
     public interface ITicTacToeManager
     {

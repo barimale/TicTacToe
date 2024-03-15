@@ -1,7 +1,7 @@
 ﻿using SyslogLogging;
-using TicTacToeGame._4x4;
-using TicTacToeGame.UIServices.Contract;
-using TicTacToeGame.Utilities;
+using TicTacToeGame._4x4.Model;
+using TicTacToeGame.Forms.UIServices.Contract;
+using TicTacToeGame.Forms.Utilities;
 
 namespace TicTacToeGame.Factory
 {

@@ -1,4 +1,4 @@
-﻿using TicTacToeGame.Factory;
+﻿using TicTacToeGame.Forms.Factory;
 using TicTacToeGame.SysTray;
 
 namespace SystemTrayApp.Menu._2_About

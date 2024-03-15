@@ -1,4 +1,4 @@
-﻿namespace TicTacToeGame.Utilities
+﻿namespace TicTacToeGame.Forms.Utilities
 {
     internal static class UIHelper
     {

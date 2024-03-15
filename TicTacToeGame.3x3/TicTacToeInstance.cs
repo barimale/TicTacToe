@@ -1,4 +1,6 @@
-﻿namespace TicTacToeGame._3x3
+﻿using TicTacToeGame._3x3.Model;
+
+namespace TicTacToeGame._3x3
 {
     public class TicTacToeInstance
     {

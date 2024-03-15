@@ -1,6 +1,6 @@
 using SyslogLogging;
-using TicTacToeGame.UIServices.Contract;
-using TicTacToeGame.Utilities;
+using TicTacToeGame.Forms.UIServices.Contract;
+using TicTacToeGame.Forms.Utilities;
 
 namespace WinFormsApp1
 {
