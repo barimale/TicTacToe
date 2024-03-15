@@ -6,10 +6,21 @@ namespace TicTacToeGame._4x4
     public class TicTacToe4x4Instance : ITicTacToe4x4Instance
     {
         public event EventHandler<OnTurnArgs>? OnTurn;
-
         private bool XTurn { get; set; } = true;
         public bool Finished { get; internal set; } = false;
 
+        public void CleanInstance()
+        {
+            XTurn = true;
+            Finished = false;
+            BoardState = new BoardStateOptions[4][]
+            {
+            new BoardStateOptions[4],
+            new BoardStateOptions[4],
+            new BoardStateOptions[4],
+            new BoardStateOptions[4]
+            };
+        }
 
         public BoardStateOptions[][] BoardState { get; internal set; } = new BoardStateOptions[4][]
         {
