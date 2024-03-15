@@ -2,8 +2,6 @@
 {
     public class OnTurnArgs : EventArgs
     {
-        public int Row { get; set; }
-        public int Column { get; set; }
-        public bool XTurn { get; set; }
+        public Move? Turn { get; set; }
     }
 }

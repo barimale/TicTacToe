@@ -20,13 +20,13 @@ namespace TicTacToeGame.UIServices
 
         private void Ttt_OnTurn(object? sender, OnTurnArgs e)
         {
-            if (e.XTurn)
+            if (e.Turn != null && e.Turn.XTurn)
             {
                 XTurns.Enqueue(new Move()
                 {
-                    Row = e.Row,
-                    Column = e.Column,
-                    XTurn = e.XTurn
+                    Row = e.Turn.Row,
+                    Column = e.Turn.Column,
+                    XTurn = e.Turn.XTurn
                 });
 
                 if (XTurns.Count == 5)
@@ -37,9 +37,12 @@ namespace TicTacToeGame.UIServices
                         ttt.ClearOperation(removed.Row, removed.Column);
                         OnTurn.Invoke(sender, new OnTurnArgs()
                         {
-                            Row = removed.Row,
-                            Column = removed.Column,
-                            XTurn = removed.XTurn
+                            Turn = new Move()
+                            {
+                                Row = removed.Row,
+                                Column = removed.Column,
+                                XTurn = removed.XTurn
+                            }
                         });
                     }
                 }
@@ -48,9 +51,9 @@ namespace TicTacToeGame.UIServices
             {
                 OTurns.Enqueue(new Move()
                 {
-                    Row = e.Row,
-                    Column = e.Column,
-                    XTurn = e.XTurn
+                    Row = e.Turn.Row,
+                    Column = e.Turn.Column,
+                    XTurn = e.Turn.XTurn
                 });
 
                 if (OTurns.Count == 5)
@@ -61,9 +64,12 @@ namespace TicTacToeGame.UIServices
                         ttt.ClearOperation(removed.Row, removed.Column);
                         OnTurn.Invoke(sender, new OnTurnArgs()
                         {
-                            Row = removed.Row,
-                            Column = removed.Column,
-                            XTurn = removed.XTurn
+                            Turn = new Move()
+                            {
+                                Row = removed.Row,
+                                Column = removed.Column,
+                                XTurn = removed.XTurn
+                            }
                         });
                     }
                 }

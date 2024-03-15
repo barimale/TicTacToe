@@ -66,70 +66,70 @@ namespace TicTacToeGame.Factory
 
         private void Manager_OnTurn(object? sender, OnTurnArgs e)
         {
-            if (e.Column == 0 && e.Row == 0)
+            if (e.Turn.Column == 0 && e.Turn.Row == 0)
             {
                 UIHelper.ClearButtons(button1);
             }
-            if (e.Column == 1 && e.Row == 0)
+            if (e.Turn.Column == 1 && e.Turn.Row == 0)
             {
                 UIHelper.ClearButtons(button2);
             }
-            if (e.Column == 2 && e.Row == 0)
+            if (e.Turn.Column == 2 && e.Turn.Row == 0)
             {
                 UIHelper.ClearButtons(button3);
             }
-            if (e.Column == 3 && e.Row == 0)
+            if (e.Turn.Column == 3 && e.Turn.Row == 0)
             {
                 UIHelper.ClearButtons(button4);
             }
 
-            if (e.Column == 0 && e.Row == 1)
+            if (e.Turn.Column == 0 && e.Turn.Row == 1)
             {
                 UIHelper.ClearButtons(button5);
             }
-            if (e.Column == 1 && e.Row == 1)
+            if (e.Turn.Column == 1 && e.Turn.Row == 1)
             {
                 UIHelper.ClearButtons(button6);
             }
-            if (e.Column == 2 && e.Row == 1)
+            if (e.Turn.Column == 2 && e.Turn.Row == 1)
             {
                 UIHelper.ClearButtons(button7);
             }
-            if (e.Column == 3 && e.Row == 1)
+            if (e.Turn.Column == 3 && e.Turn.Row == 1)
             {
                 UIHelper.ClearButtons(button8);
             }
 
-            if (e.Column == 0 && e.Row == 2)
+            if (e.Turn.Column == 0 && e.Turn.Row == 2)
             {
                 UIHelper.ClearButtons(button9);
             }
-            if (e.Column == 1 && e.Row == 2)
+            if (e.Turn.Column == 1 && e.Turn.Row == 2)
             {
                 UIHelper.ClearButtons(button10);
             }
-            if (e.Column == 2 && e.Row == 2)
+            if (e.Turn.Column == 2 && e.Turn.Row == 2)
             {
                 UIHelper.ClearButtons(button11);
             }
-            if (e.Column == 3 && e.Row == 2)
+            if (e.Turn.Column == 3 && e.Turn.Row == 2)
             {
                 UIHelper.ClearButtons(button12);
             }
 
-            if (e.Column == 0 && e.Row == 3)
+            if (e.Turn.Column == 0 && e.Turn.Row == 3)
             {
                 UIHelper.ClearButtons(button13);
             }
-            if (e.Column == 1 && e.Row == 3)
+            if (e.Turn.Column == 1 && e.Turn.Row == 3)
             {
                 UIHelper.ClearButtons(button14);
             }
-            if (e.Column == 2 && e.Row == 3)
+            if (e.Turn.Column == 2 && e.Turn.Row == 3)
             {
                 UIHelper.ClearButtons(button15);
             }
-            if (e.Column == 3 && e.Row == 3)
+            if (e.Turn.Column == 3 && e.Turn.Row == 3)
             {
                 UIHelper.ClearButtons(button16);
             }

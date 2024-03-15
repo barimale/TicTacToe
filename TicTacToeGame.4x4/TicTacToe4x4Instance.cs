@@ -174,9 +174,12 @@
             {
                 OnTurn.Invoke(null, new OnTurnArgs()
                 {
-                    Row = row,
-                    Column = column,
-                    XTurn = XTurn
+                    Turn = new Move()
+                    {
+                        Row = row,
+                        Column = column,
+                        XTurn = XTurn
+                    }
                 });
             }
 
