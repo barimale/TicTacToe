@@ -2,7 +2,7 @@
 {
     public class TicTacToe4x4Instance : ITicTacToe4x4Instance
     {
-        public event EventHandler<OnTurnArgs> OnTurn;
+        public event EventHandler<OnTurnArgs>? OnTurn;
 
         private bool XTurn { get; set; } = true;
         public bool Finished { get; internal set; } = false;
@@ -40,7 +40,6 @@
             return winnerOption.HasValue;
         }
 
-        // WIP
         private WinnerOption? CheckCross1()
         {
             int num = 0;
@@ -70,7 +69,7 @@
                     num++;
                 }
             }
-            // WIP
+            
             if (num >= 3 && BoardState[0][3] != 0)
             {
                 return BoardState[0][BoardState.Length - 1] != BoardStateOptions.X ? WinnerOption.OPlayer : WinnerOption.XPlayer;
@@ -131,6 +130,21 @@
 
         public void ClearOperation(int row, int column)
         {
+            if (Finished)
+            {
+                throw new Exception("Game finished.");
+            }
+
+            if (row > 3)
+            {
+                throw new IndexOutOfRangeException("The maximum row index can be 3");
+            }
+
+            if (column > 3)
+            {
+                throw new IndexOutOfRangeException("The maximum column index can be 3");
+            }
+
             BoardState[row][column] = BoardStateOptions.Undefined;
         }
 
@@ -143,12 +157,12 @@
 
             if (row > 3)
             {
-                throw new IndexOutOfRangeException("The maximum row index can be 2");
+                throw new IndexOutOfRangeException("The maximum row index can be 3");
             }
 
             if (column > 3)
             {
-                throw new IndexOutOfRangeException("The maximum column index can be 2");
+                throw new IndexOutOfRangeException("The maximum column index can be 3");
             }
 
             if (BoardState[row][column] != 0)
