@@ -44,12 +44,13 @@ namespace TicTacToeGame._4x4
 
         private bool CheckForWinner(out WinnerOption? WinnerObject)
         {
-            WinnerOption? winnerOption = WinnerObject = new WinnerOption?[4]
+            WinnerOption? winnerOption = WinnerObject = new WinnerOption?[5]
             {
             CheckCross1(),
             CheckCross2(),
             CheckRows(),
-            CheckColumns()
+            CheckColumns(),
+            CheckOuter2x2s()
             }.FirstOrDefault((po) => po.HasValue);
             Finished = winnerOption.HasValue;
             return winnerOption.HasValue;
@@ -115,6 +116,27 @@ namespace TicTacToeGame._4x4
                 return BoardState[3][0] != BoardStateOptions.X ? WinnerOption.OPlayer : WinnerOption.XPlayer;
             }
 
+            return null;
+        }
+
+        private WinnerOption? CheckOuter2x2s()
+        {
+            if (AllEqual(BoardState[0][0], BoardState[0][1], BoardState[1][0], BoardState[1][1]) && BoardState[0][0] != 0)
+            {
+                return BoardState[0][0] != BoardStateOptions.X ? WinnerOption.OPlayer : WinnerOption.XPlayer;
+            }
+            if (AllEqual(BoardState[0][2], BoardState[0][3], BoardState[1][2], BoardState[1][3]) && BoardState[0][2] != 0)
+            {
+                return BoardState[0][2] != BoardStateOptions.X ? WinnerOption.OPlayer : WinnerOption.XPlayer;
+            }
+            if (AllEqual(BoardState[2][0], BoardState[2][1], BoardState[3][0], BoardState[3][1]) && BoardState[2][0] != 0)
+            {
+                return BoardState[2][0] != BoardStateOptions.X ? WinnerOption.OPlayer : WinnerOption.XPlayer;
+            }
+            if (AllEqual(BoardState[2][2], BoardState[2][3], BoardState[3][2], BoardState[3][3]) && BoardState[2][2] != 0)
+            {
+                return BoardState[2][2] != BoardStateOptions.X ? WinnerOption.OPlayer : WinnerOption.XPlayer;
+            }
             return null;
         }
 
