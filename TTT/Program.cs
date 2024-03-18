@@ -18,7 +18,7 @@ namespace TicTacToeGame.SysTray
         ///  The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main(params string[] args)
+        static void Main()
         {
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
