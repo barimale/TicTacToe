@@ -17,17 +17,13 @@ namespace TicTacToeGame.SysTray.Menu
         private readonly ExitMenuItem exit;
         private readonly SeparatorMenuItem separator;
 
-        private ContextMenu()
-        {
-            exit = new ExitMenuItem();
-            separator = new SeparatorMenuItem();
-        }
-
-        public ContextMenu(IFormFactory formFactory) : this()
+        public ContextMenu(IFormFactory formFactory)
         {
             this.formFactory = formFactory;
             _3x_3tictactoe = new TTT_3x_3MenuItem(this.formFactory);
             _4x_4tictactoe = new TTT_4x_4MenuItem(this.formFactory);
+            exit = new ExitMenuItem();
+            separator = new SeparatorMenuItem();
         }
 
         /// <summary>
