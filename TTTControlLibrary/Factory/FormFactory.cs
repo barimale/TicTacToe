@@ -4,12 +4,6 @@ using WinFormsApp1;
 
 namespace TicTacToeGame.Forms.Factory
 {
-    public interface IFormFactory
-    {
-        Form1 CreateTTTForm();
-        Form2 CreateTTT4x4Form();
-    }
-
     public class FormFactory : IFormFactory
     {
         private IServiceProvider _serviceProvider;
