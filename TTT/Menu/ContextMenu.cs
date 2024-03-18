@@ -6,7 +6,7 @@ using TicTacToeGame.SysTray.Menu.Separator;
 namespace TicTacToeGame.SysTray.Menu
 {
     /// <summary>
-    /// 
+    /// ContextMenu of the notify icon (sysTray)
     /// </summary>
     public class ContextMenu
     {
