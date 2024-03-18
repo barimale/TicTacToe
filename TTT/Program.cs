@@ -23,11 +23,11 @@ namespace TicTacToeGame.SysTray
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            ApplicationConfiguration.Initialize();
 
             var host = CreateHostBuilder().Build();
             ServiceProvider = host.Services;
             var formFactory = new FormFactory(ServiceProvider);
-            ApplicationConfiguration.Initialize();
 
             using (MenuSysTray pi = new MenuSysTray(formFactory))
             {
