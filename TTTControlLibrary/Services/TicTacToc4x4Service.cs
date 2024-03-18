@@ -9,7 +9,7 @@ namespace TicTacToeGame.Forms.Services
         private ITicTacToe4x4Instance ttt;
         public WinnerOption? result;
 
-        public event EventHandler<OnTurnArgs> OnTurn;
+        public event EventHandler<OnTurnArgs>? OnTurn;
 
 
         public WinnerOption? Result => result;
