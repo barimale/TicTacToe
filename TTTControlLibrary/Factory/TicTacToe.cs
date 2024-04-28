@@ -84,7 +84,7 @@ namespace WinFormsApp1
             finally
             {
                 var result = manager.IsFinished();
-                if(result)
+                if (result)
                     RefreshGame(null, null);
             }
         }

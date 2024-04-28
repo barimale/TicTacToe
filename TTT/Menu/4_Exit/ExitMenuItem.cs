@@ -6,7 +6,7 @@ namespace SystemTrayApp.Menu._4_Exit
     /// 
     /// </summary>
     public class ExitMenuItem
-	{
+    {
         public ToolStripMenuItem Create()
         {
             var item = new ToolStripMenuItem();
@@ -23,8 +23,8 @@ namespace SystemTrayApp.Menu._4_Exit
         /// <param name="sender">The sender.</param>
         /// <param name="e">The <see cref="System.EventArgs"/> instance containing the event data.</param>
         public void Exit_Click(object sender, EventArgs e)
-		{
-			Application.Exit();
-		}
-	}
+        {
+            Application.Exit();
+        }
+    }
 }

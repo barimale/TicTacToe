@@ -85,7 +85,7 @@ namespace TicTacToeGame._4x4
                     num++;
                 }
             }
-            
+
             if (num >= 3 && BoardState[0][3] != 0)
             {
                 return BoardState[0][BoardState.Length - 1] != BoardStateOptions.X ? WinnerOption.OPlayer : WinnerOption.XPlayer;
