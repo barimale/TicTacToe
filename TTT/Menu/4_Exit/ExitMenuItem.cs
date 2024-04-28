@@ -1,6 +1,6 @@
 ﻿using TicTacToeGame.SysTray;
 
-namespace SystemTrayApp
+namespace SystemTrayApp.Menu._4_Exit
 {
     /// <summary>
     /// 

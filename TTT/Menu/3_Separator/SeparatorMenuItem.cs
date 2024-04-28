@@ -1,4 +1,4 @@
-﻿namespace TicTacToeGame.SysTray.Menu.Separator
+﻿namespace TicTacToeGame.SysTray.Menu._3_Separator
 {
     /// <summary>
     /// 

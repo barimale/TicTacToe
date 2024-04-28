@@ -1,7 +1,7 @@
 ﻿using TicTacToeGame.Forms.Factory;
 using TicTacToeGame.SysTray;
 
-namespace SystemTrayApp.Menu._2_About
+namespace SystemTrayApp.Menu._1_TTT3x3
 {
     /// <summary>
     /// 
@@ -15,31 +15,31 @@ namespace SystemTrayApp.Menu._2_About
             this.formFactory = formFactory;
         }
 
-		/// <summary>
-		/// Creates this instance.
-		/// </summary>
-		/// <returns>ContextMenuStrip</returns>
-		public ToolStripMenuItem Create()
-		{
-			// Add the default menu options.
-			ToolStripMenuItem item;
+        /// <summary>
+        /// Creates this instance.
+        /// </summary>
+        /// <returns>ContextMenuStrip</returns>
+        public ToolStripMenuItem Create()
+        {
+            // Add the default menu options.
+            ToolStripMenuItem item;
 
-			// About.
-			item = new ToolStripMenuItem();
-			item.Text = "TicTacToe 3x3";
-			item.Click += new EventHandler(_3x_3_Click);
-			item.Image = Resources._3x3;
+            // About.
+            item = new ToolStripMenuItem();
+            item.Text = "TicTacToe 3x3";
+            item.Click += new EventHandler(_3x_3_Click);
+            item.Image = Resources._3x3;
 
-			return item;
-		}
+            return item;
+        }
 
-		/// <summary>
-		/// Handles the Click event of the About control.
-		/// </summary>
-		/// <param name="sender">The source of the event.</param>
-		/// <param name="e">The <see cref="System.EventArgs"/> instance containing the event data.</param>
-		public void _3x_3_Click(object sender, EventArgs e)
-		{
+        /// <summary>
+        /// Handles the Click event of the About control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="System.EventArgs"/> instance containing the event data.</param>
+        public void _3x_3_Click(object sender, EventArgs e)
+        {
             formFactory.CreateTTTForm().Show(); // formfactory here
         }
     }

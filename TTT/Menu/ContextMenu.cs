@@ -1,7 +1,8 @@
-﻿using SystemTrayApp;
-using SystemTrayApp.Menu._2_About;
+﻿using SystemTrayApp.Menu._1_TTT3x3;
+using SystemTrayApp.Menu._2_TTT4x4;
+using SystemTrayApp.Menu._4_Exit;
 using TicTacToeGame.Forms.Factory;
-using TicTacToeGame.SysTray.Menu.Separator;
+using TicTacToeGame.SysTray.Menu._3_Separator;
 
 namespace TicTacToeGame.SysTray.Menu
 {
@@ -14,8 +15,8 @@ namespace TicTacToeGame.SysTray.Menu
 
         private readonly TTT_3x_3MenuItem _3x_3tictactoe;
         private readonly TTT_4x_4MenuItem _4x_4tictactoe;
-        private readonly ExitMenuItem exit;
         private readonly SeparatorMenuItem separator;
+        private readonly ExitMenuItem exit;
 
         public ContextMenu(IFormFactory formFactory)
         {
