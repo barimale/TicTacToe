@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+		<metadata>
+			<id>TicTacToe3x3</id>
+			<version>1.0.0.0</version>
+			<authors>barimale</authors>
+			<owners>barimale</owners>
+			<requireLicenseAcceptance>false</requireLicenseAcceptance>
+			<projectUrl>https://github.com/barimale/TicTacToe</projectUrl>
+			<tags>TicTacToe</tags>
+			<description>Tic tac toe 3x3 engine</description>
+		</metadata>
+	<files>
+		<file src="TicTacToeGame.3x3\bin\Release\net8.0\TicTacToeGame.3x3.Service.dll" target="lib\net8.0" />
+		<file src="TicTacToeGame.3x3\bin\Release\net8.0\TicTacToeGame.3x3.Service.pdb" target="lib\net8.0" />
+	</files>
+</package>
