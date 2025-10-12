@@ -8,5 +8,5 @@ an additional folder is added, which contains corrections.
 
 TTT 4x4 is a kind of game, where only 4 fields may be selected.
 Any time 5th field is being chosen, the first selection is cleared.
-# Execution
+# Additional info
 App is avalaible in a form of notify icon in systray.
